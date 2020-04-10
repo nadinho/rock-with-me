@@ -8,7 +8,7 @@ export default {
 };
 
 export const Text = () => (
-  <Button onClick={action("clicked")}>Hello Button</Button>
+  <Button onClick={action("clicked")}>Hellfeferfo Button</Button>
 );
 
 export const Emoji = () => (
