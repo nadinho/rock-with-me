@@ -1,4 +1,5 @@
 import styled from "@emotion/styled";
+import colors from "../utils/colors";
 
 export const ButtonFull = styled.button`
   height: 50px;
@@ -6,11 +7,13 @@ export const ButtonFull = styled.button`
   border-radius: 6px;
   border: none;
   outline: none;
-  background: linear-gradient(50deg, #00a8ff, #ad00a4);
-  color: #fff;
+  background: linear-gradient(
+    50deg,
+    ${colors.gradientOne},
+    ${colors.gradientTwo}
+  );
   font-size: 0.8rem;
   font-weight: 500;
-  color: #fff;
+  color: ${colors.primaryText};
   text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
 `;

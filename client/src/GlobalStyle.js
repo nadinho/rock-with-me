@@ -13,9 +13,10 @@ export default function GlobalStyle() {
         }
         body {
           height: 100vh;
-          font-size: 0.8rem;
+          font-size: 0.9rem;
           margin: 0;
           font-family: "Montserrat", sans-serif;
+          color: ${colors.primaryText};
           background-color: ${colors.background};
           &:after {
             content: "";

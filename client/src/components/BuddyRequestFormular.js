@@ -49,7 +49,7 @@ const Label = styled.label`
 const Form = styled.form`
   display: flex;
   flex-direction: column;
-  font-family: "Montserrat", sans-serif;
+
   color: ${colors.primaryText};
 `;
 

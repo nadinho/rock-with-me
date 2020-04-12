@@ -106,9 +106,8 @@ const Picture = styled.img`
 const Title = styled.h3`
   font-size: 1.75rem;
   font-weight: 700;
-  color: #fff;
+  color: ${colors.primaryText};
   text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
   &::after {
     content: "";
     display: block;
@@ -131,19 +130,14 @@ const DetailsContainer = styled.div`
 `;
 
 const Detail = styled.p`
-  font-size: 0.9rem;
   font-weight: 400;
-  color: #fff;
   font-family: "Montserrat", sans-serif;
 `;
 
 const Mitrocker = styled.p`
   margin-right: 10px;
-  font-size: 0.9rem;
   font-weight: 900;
-  color: #fff;
   text-transform: uppercase;
-  font-family: "Montserrat", sans-serif;
 `;
 
 const Buddies = styled.img`
@@ -161,12 +155,8 @@ const CardButton = styled.button`
     ${colors.gradientTwo}
   );
   border: none;
-  color: white;
   border-radius: 20px;
-  font-size: 0.9rem;
   font-weight: 500;
-  color: #fff;
-  font-family: "Montserrat", sans-serif;
   outline: none;
   align-self: flex-end;
   margin-top: 12px;
