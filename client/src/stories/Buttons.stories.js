@@ -2,11 +2,7 @@ import React from "react";
 import { action } from "@storybook/addon-actions";
 import { ButtonFull } from "../components/ButtonFull";
 import { ButtonOutline } from "../components/ButtonOutline";
-import { storiesOf, addDecorator } from "@storybook/react";
-
-import backgroundColor from "react-storybook-decorator-background";
-
-addDecorator(backgroundColor(["#293133", "#d3d3d3"]));
+import { storiesOf } from "@storybook/react";
 
 storiesOf("Buttons", module).add("Buttons", () => (
   <>
