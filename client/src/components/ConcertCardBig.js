@@ -1,10 +1,10 @@
 import styled from "@emotion/styled";
 import React from "react";
 import colors from "../utils/colors";
-import Location from "../icons/location.png";
-import Date from "../icons/date.png";
-import Euro from "../icons/euro.png";
-import Train from "../icons/train.png";
+import Location from "../assets/icons/location.png";
+import Date from "../assets/icons/date.png";
+import Euro from "../assets/icons/euro.png";
+import Train from "../assets/icons/train.png";
 
 export default function ConcertCardBig() {
   return (
