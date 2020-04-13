@@ -1,14 +1,14 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 import centered from "@storybook/addon-centered/react";
-import BuddyRequestFormular from "../components/BuddyRequestFormular";
+import RequestForm from "../components/RequestForm";
 import GlobalStyle from "../GlobalStyle";
 
-storiesOf("BuddyRequestFormular", module)
+storiesOf("Request form", module)
   .addDecorator(centered)
-  .add("BuddyRequestFormular", () => (
+  .add("Request form", () => (
     <>
       <GlobalStyle />
-      <BuddyRequestFormular />
+      <RequestForm />
     </>
   ));
