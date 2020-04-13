@@ -1,6 +1,11 @@
 {
   "name": "PROJECT-client",
   "version": "0.1.0",
+  "engines": {
+    "node": "12.16.x",
+    "npm": "6.x",
+    "yarn": "1.x"
+  },
   "private": true,
   "dependencies": {
     "@emotion/core": "^10.0.28",
