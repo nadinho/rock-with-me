@@ -1,6 +1,11 @@
 {
   "name": "rock-with-me",
   "version": "1.0.0",
+  "engines": {
+    "node": "12.16.x",
+    "npm": "6.x",
+    "yarn": "1.x"
+  },
   "main": "index.js",
   "scripts": {
     "heroku-prebuild": "cd client && npm i",
