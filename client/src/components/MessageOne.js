@@ -12,7 +12,11 @@ export default function SpeechBubbleOne() {
 }
 
 const Message = styled.div`
-  background: linear-gradient(50deg, ${colors.gradientOne}, #364cf7);
+  background: linear-gradient(
+    50deg,
+    ${colors.gradientOne},
+    ${colors.additionalGradientOne}
+  );
   padding: 18px 20px;
   line-height: 1.625;
   font-size: 1rem;
