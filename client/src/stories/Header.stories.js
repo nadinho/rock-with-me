@@ -1,5 +1,5 @@
 import React from "react";
-import PageHeader from "../components/Header";
+import PageHeader from "../components/PageHeader";
 
 export default {
   title: "Header",
