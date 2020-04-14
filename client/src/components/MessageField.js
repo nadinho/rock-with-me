@@ -35,10 +35,15 @@ const MessageInput = styled.input`
   outline: none;
   border: none;
   font-size: 0.8rem;
+  caret-color: ${colors.gradientTwo};
   color: ${colors.primaryText};
   font-family: "Montserrat", sans-serif;
   ::placeholder {
     color: ${colors.primaryText};
+  }
+  &:focus {
+    font-size: 0.9rem;
+    padding: 15px;
   }
 `;
 
