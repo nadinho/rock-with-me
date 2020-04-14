@@ -3,7 +3,7 @@ import React from "react";
 import colors from "../utils/colors";
 import Arrow from "../assets/icons/arrow-right.png";
 
-export default function PageHeader() {
+export default function MessageField() {
   return (
     <Container>
       <MessageInput placeholder="Gib hier deine Nachricht ein..."></MessageInput>
