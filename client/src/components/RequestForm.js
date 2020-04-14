@@ -42,10 +42,6 @@ const Div = styled.div`
   flex-direction: column;
 `;
 
-const Label = styled.label`
-  font-size: 13px;
-`;
-
 const Form = styled.form`
   display: flex;
   flex-direction: column;
@@ -73,11 +69,27 @@ const Input = styled.input`
   font-size: 1rem;
   color: ${colors.primaryText};
   padding: 10px;
-
   caret-color: red;
+  &:focus {
+    outline: none;
+  }
 
-  ::placeholder {
+  /* ::placeholder {
     color: ${colors.primaryText};
-    opacity: 0.6;
+    opacity: 0.6; 
+  }*/
+`;
+
+const Label = styled.label`
+  font-size: 13px;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all;
+  ${Input}:focus ~ & {
+    top: -18px;
+    font-size: 14px;
+    color: #5264ae;
   }
 `;
