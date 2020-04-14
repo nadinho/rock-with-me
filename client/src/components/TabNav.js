@@ -1,9 +1,9 @@
 import styled from "@emotion/styled";
 import React from "react";
-import Home from "../icons/home.png";
-import Konzerte from "../icons/star.png";
-import Profil from "../icons/user-profile.png";
-import Messages from "../icons/speech-bubble.png";
+import Home from "../assets/icons/home.png";
+import Konzerte from "../assets/icons/star.png";
+import Profil from "../assets/icons/user-profile.png";
+import Messages from "../assets/icons/speech-bubble.png";
 import colors from "../utils/colors";
 
 export default function TabNav() {
