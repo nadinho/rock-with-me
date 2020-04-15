@@ -2,11 +2,11 @@ import React from "react";
 import styled from "@emotion/styled";
 import colors from "../utils/colors";
 
-export default function FloatingInput() {
+export default function FloatingInput(props) {
   return (
     <Wrapper>
-      <Input />
-      <Label>Label</Label>
+      <Input required />
+      <Label {...props}></Label>
     </Wrapper>
   );
 }
@@ -16,7 +16,7 @@ const Wrapper = styled.div`
 `;
 
 const Input = styled.input`
-  margin: 10px;
+  margin: 15px 10px;
   border-right: 2px solid transparent;
   border-image: linear-gradient(
     50deg,
@@ -43,6 +43,11 @@ const Label = styled.label`
   top: 22px;
   transition: 0.2s ease all;
   Input:focus ~ & {
+    top: -8px;
+    left: 14px;
+    font-size: 0.75rem;
+  }
+  Input:valid ~ & {
     top: -8px;
     left: 14px;
     font-size: 0.75rem;
