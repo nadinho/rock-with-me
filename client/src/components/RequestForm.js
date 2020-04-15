@@ -1,95 +1,54 @@
 import styled from "@emotion/styled";
 import React from "react";
-import colors from "../utils/colors";
+import FloatingInput from "./FloatingInput";
+import PropTypes from "prop-types";
+import FloatingTextArea from "./FloatingTextArea";
+import { Select } from "./Select";
 
-export default function ConcertCardBig() {
+export default function RequestForm({
+  artist,
+  date,
+  location,
+  city,
+  arrival,
+  price,
+  text,
+}) {
   return (
     <Form type="submit">
-      <Div>
-        <Label>Band/Künstler</Label>
-        <Input type="text" placeholder=""></Input>
-      </Div>
-      <Div>
-        <Label>Datum</Label>
-        <Input type="date" placeholder=""></Input>
-      </Div>
-      <Div>
-        <Label>Location</Label>
-        <Input type="text" placeholder=""></Input>
-      </Div>
-      <Div>
-        <Label>Stadt</Label>
-        <Input type="text" placeholder=""></Input>
-      </Div>
-      <Div>
-        <Label>Anfahrt</Label>
-        <Input type="text" placeholder=""></Input>
-      </Div>
-      <Div>
-        <Label>Ticketpreis</Label>
-        <Input type="text" placeholder=""></Input>
-      </Div>
-      <Div>
-        <Label>Dein Text</Label>
-        <Input type="text" placeholder=""></Input>
-      </Div>
+      <FloatingInput value={artist}>Band/Künstler</FloatingInput>
+      <FloatingInput type="date" value={date}>
+        Veranstaltungsdatum
+      </FloatingInput>
+      <FloatingInput value={location}>Veranstaltungsort</FloatingInput>
+      <FloatingInput value={city}>Stadt</FloatingInput>
+      <Select value={arrival}>
+        <option value="">Wie willst du anreisen?</option>
+        <option value="auto">Auto</option>
+        <option value="öpnv">ÖPNV</option>
+        <option value="fahrrad" label="test"></option>
+        <option value="fuß">Zu Fuß</option>
+        <option value="mitfahrgelegenheit">Mitfahrgelegenheit</option>
+        <option value="sonstiges">Sonstiges</option>
+      </Select>
+      <FloatingInput value={price}>Ticketpreis</FloatingInput>
+      <FloatingTextArea value={text}>Schreibe hier einen Text</FloatingTextArea>
     </Form>
   );
 }
 
-const Div = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
 const Form = styled.form`
+  width: 80%;
   display: flex;
   flex-direction: column;
-
-  color: ${colors.primaryText};
 `;
 
-const Input = styled.input`
-  margin: 10px;
-
-  border-right: 2px solid transparent;
-  border-image: linear-gradient(
-    50deg,
-    ${colors.gradientOne},
-    ${colors.gradientTwo}
-  );
-  border-image-slice: 1;
-  font-family: "Montserrat", sans-serif;
-  background: transparent;
-  background-size: 10px 100%;
-  background-position: 0 0, 100% 0;
-  background-repeat: no-repeat;
-  outline: none;
-
-  font-size: 1rem;
-  color: ${colors.primaryText};
-  padding: 10px;
-  caret-color: red;
-  &:focus {
-    outline: none;
-  }
-
-  /* ::placeholder {
-    color: ${colors.primaryText};
-    opacity: 0.6; 
-  }*/
-`;
-
-const Label = styled.label`
-  font-size: 13px;
-  position: absolute;
-  pointer-events: none;
-  left: 5px;
-  top: 10px;
-  transition: 0.2s ease all;
-  ${Input}:focus ~ & {
-    top: -18px;
-    font-size: 14px;
-    color: #5264ae;
-  }
-`;
+RequestForm.propTypes = {
+  artist: PropTypes.string,
+  date: PropTypes.string,
+  location: PropTypes.string,
+  city: PropTypes.string,
+  arrival: PropTypes.string,
+  price: PropTypes.string,
+  text: PropTypes.string,
+};
