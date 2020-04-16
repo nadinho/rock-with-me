@@ -1,7 +1,6 @@
 import styled from "@emotion/styled";
 import React from "react";
 import PropTypes from "prop-types";
-
 import { Dropdown } from "./Dropdown";
 import { Input } from "./Input";
 import { FloatingLabel } from "./FloatingLabel";
@@ -48,6 +47,7 @@ export default function RequestForm() {
       <Div>
         <Input
           required
+          type="date"
           value={date}
           onChange={(event) => {
             setDate(event.target.value);

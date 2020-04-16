@@ -21,4 +21,7 @@ export const Input = styled.input`
   color: ${colors.primaryText};
   padding: 10px;
   caret-color: ${colors.gradientTwo};
+  &::-webkit-datetime-edit {
+    padding-left: 80px;
+  }
 `;
