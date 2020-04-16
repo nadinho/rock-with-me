@@ -1,5 +1,7 @@
 import styled from "@emotion/styled";
 import React from "react";
+import PropTypes from "prop-types";
+
 import { Dropdown } from "./Dropdown";
 import { Input } from "./Input";
 import { FloatingLabel } from "./FloatingLabel";
@@ -125,3 +127,13 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
 `;
+
+RequestForm.propTypes = {
+  artist: PropTypes.string,
+  date: PropTypes.number,
+  location: PropTypes.string,
+  city: PropTypes.string,
+  arrival: PropTypes.string,
+  price: PropTypes.number,
+  text: PropTypes.string,
+};
