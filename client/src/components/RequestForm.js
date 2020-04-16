@@ -1,55 +1,49 @@
 import styled from "@emotion/styled";
 import React from "react";
-import colors from "../utils/colors";
 import { Input } from "./Input";
+import { FloatingLabel } from "./FloatingLabel";
 
 export default function RequestForm() {
   return (
     <Form type="submit">
       <Div>
-        <Label>Band/Künstler</Label>
-        <Input type="text" placeholder=""></Input>
+        <Input required></Input>
+        <FloatingLabel>Band/Künstler</FloatingLabel>
       </Div>
       <Div>
-        <Label>Datum</Label>
-        <Input type="date" placeholder=""></Input>
+        <Input required />
+        <FloatingLabel>Datum</FloatingLabel>
       </Div>
       <Div>
-        <Label>Location</Label>
-        <Input type="text" placeholder=""></Input>
+        <Input required />
+        <FloatingLabel>Location</FloatingLabel>
       </Div>
       <Div>
-        <Label>Stadt</Label>
-        <Input type="text" placeholder=""></Input>
+        <Input required />
+        <FloatingLabel>Stadt</FloatingLabel>
       </Div>
       <Div>
-        <Label>Anfahrt</Label>
-        <Input type="text" placeholder=""></Input>
+        <Input required />
+        <FloatingLabel>Anfahrt</FloatingLabel>
       </Div>
       <Div>
-        <Label>Ticketpreis</Label>
-        <Input type="text" placeholder=""></Input>
+        <Input required />
+        <FloatingLabel>Ticketpreis</FloatingLabel>
       </Div>
       <Div>
-        <Label>Dein Text</Label>
-        <Input type="text" placeholder=""></Input>
+        <Input required />
+        <FloatingLabel>Dein Text</FloatingLabel>
       </Div>
     </Form>
   );
 }
 
 const Div = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const Label = styled.label`
-  font-size: 13px;
+  position: relative;
 `;
 
 const Form = styled.form`
+  width: 80%;
   display: flex;
   flex-direction: column;
-
-  color: ${colors.primaryText};
 `;
