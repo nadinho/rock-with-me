@@ -1,7 +1,11 @@
 import React from "react";
+import TabNav from "../components/TabNav";
 
-function Home() {
-  return <div>Home</div>;
+export default function Home() {
+  return (
+    <div>
+      Home
+      <TabNav></TabNav>
+    </div>
+  );
 }
-
-export default Home;
