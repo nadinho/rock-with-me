@@ -34,7 +34,7 @@ export default function RequestForm() {
 
   return (
     <Form onSubmit={handleSubmit}>
-      <Div>
+      <Wrapper>
         <Input
           required
           value={artist}
@@ -43,8 +43,8 @@ export default function RequestForm() {
           }}
         />
         <FloatingLabel>Band/Künstler</FloatingLabel>
-      </Div>
-      <Div>
+      </Wrapper>
+      <Wrapper>
         <Input
           required
           type="date"
@@ -54,8 +54,8 @@ export default function RequestForm() {
           }}
         />
         <FloatingLabel>Datum</FloatingLabel>
-      </Div>
-      <Div>
+      </Wrapper>
+      <Wrapper>
         <Input
           required
           value={location}
@@ -63,9 +63,9 @@ export default function RequestForm() {
             setLocation(event.target.value);
           }}
         />
-        <FloatingLabel>Location</FloatingLabel>
-      </Div>
-      <Div>
+        <FloatingLabel>Veranstaltungsort</FloatingLabel>
+      </Wrapper>
+      <Wrapper>
         <Input
           required
           value={city}
@@ -74,8 +74,8 @@ export default function RequestForm() {
           }}
         />
         <FloatingLabel>Stadt</FloatingLabel>
-      </Div>
-      <Div>
+      </Wrapper>
+      <Wrapper>
         <Dropdown
           required
           value={arrival}
@@ -91,8 +91,8 @@ export default function RequestForm() {
           <option value="mitfahrgelegenheit">Mitfahrgelegenheit</option>
           <option value="sonstiges">Sonstiges</option>
         </Dropdown>
-      </Div>
-      <Div>
+      </Wrapper>
+      <Wrapper>
         <Input
           required
           type="number"
@@ -102,8 +102,8 @@ export default function RequestForm() {
           }}
         />
         <FloatingLabel>Ticketpreis</FloatingLabel>
-      </Div>
-      <Div>
+      </Wrapper>
+      <Wrapper>
         <Textarea
           required
           value={text}
@@ -112,13 +112,13 @@ export default function RequestForm() {
           }}
         />
         <FloatingLabel>Hier kommt dein Text rein</FloatingLabel>
-      </Div>
+      </Wrapper>
       <ButtonFull>Absenden</ButtonFull>
     </Form>
   );
 }
 
-const Div = styled.div`
+const Wrapper = styled.div`
   position: relative;
 `;
 
