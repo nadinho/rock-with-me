@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import React from "react";
+import { Dropdown } from "./Dropdown";
 import { Input } from "./Input";
 import { FloatingLabel } from "./FloatingLabel";
 
@@ -22,10 +23,17 @@ export default function RequestForm() {
         <Input required />
         <FloatingLabel>Stadt</FloatingLabel>
       </Div>
-      <Div>
-        <Input required />
-        <FloatingLabel>Anfahrt</FloatingLabel>
-      </Div>
+
+      <Dropdown required>
+        <option value="">Wie willst du anreisen?</option>
+        <option value="auto">Auto</option>
+        <option value="öpnv">ÖPNV</option>
+        <option value="fahrrad">Fahrrad</option>
+        <option value="fuß">Zu Fuß</option>
+        <option value="mitfahrgelegenheit">Mitfahrgelegenheit</option>
+        <option value="sonstiges">Sonstiges</option>
+      </Dropdown>
+
       <Div>
         <Input required />
         <FloatingLabel>Ticketpreis</FloatingLabel>
@@ -43,7 +51,8 @@ const Div = styled.div`
 `;
 
 const Form = styled.form`
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
 `;
