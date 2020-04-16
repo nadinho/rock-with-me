@@ -4,6 +4,7 @@ import { Dropdown } from "./Dropdown";
 import { Input } from "./Input";
 import { FloatingLabel } from "./FloatingLabel";
 import { ButtonFull } from "./ButtonFull";
+import { Textarea } from "./Textarea";
 
 export default function RequestForm() {
   const [artist, setArtist] = React.useState("");
@@ -101,14 +102,14 @@ export default function RequestForm() {
         <FloatingLabel>Ticketpreis</FloatingLabel>
       </Div>
       <Div>
-        <Input
+        <Textarea
           required
           value={text}
           onChange={(event) => {
             setText(event.target.value);
           }}
         />
-        <FloatingLabel>Dein Text</FloatingLabel>
+        <FloatingLabel>Hier kommt dein Text rein</FloatingLabel>
       </Div>
       <ButtonFull>Absenden</ButtonFull>
     </Form>
