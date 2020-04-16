@@ -1,5 +1,9 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
 import RequestForm from "../components/RequestForm";
 
-storiesOf("Request form", module).add("Request form", () => <RequestForm />);
+export default {
+  title: "Forms",
+  component: RequestForm,
+};
+
+export const requestForm = () => <RequestForm />;
