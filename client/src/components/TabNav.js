@@ -1,5 +1,6 @@
 import styled from "@emotion/styled";
 import React from "react";
+import { Link } from "react-router-dom";
 import Home from "../assets/icons/home.png";
 import Konzerte from "../assets/icons/star.png";
 import Profil from "../assets/icons/user-profile.png";
@@ -9,25 +10,50 @@ import colors from "../utils/colors";
 export default function TabNav() {
   return (
     <TabBar>
-      <Container>
+      <StyledLink to="/home">
         <Img src={Home} alt="Logo" />
         <IconText>Home</IconText>
-      </Container>
-      <Container>
+      </StyledLink>
+
+      <StyledLink to="/concerts">
         <Img src={Konzerte} alt="Konzerte" />
         <IconText>Konzerte</IconText>
-      </Container>
-      <Container>
+      </StyledLink>
+
+      <StyledLink to="/messages">
         <Img src={Messages} alt="Messages" />
         <IconText>Messages</IconText>
-      </Container>
-      <Container>
+      </StyledLink>
+
+      <StyledLink to="/profile">
         <Img src={Profil} alt="Profil" />
         <IconText>Profil</IconText>
-      </Container>
+      </StyledLink>
     </TabBar>
   );
 }
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  display: flex;
+  width: 25%;
+  flex-direction: column;
+  align-items: center;
+  &:focus,
+  &:hover,
+  &:visited,
+  &:link {
+    text-decoration: none;
+    color: ${colors.primaryText};
+  }
+  &:active {
+    background: linear-gradient(
+      50deg,
+      ${colors.gradientOne},
+      ${colors.gradientTwo}
+    );
+  }
+`;
 
 const TabBar = styled.nav`
   display: flex;
@@ -35,7 +61,6 @@ const TabBar = styled.nav`
   justify-content: space-around;
   background: ${colors.background};
   width: 100%;
-  height: 69;
   position: fixed;
   bottom: 0;
 `;
@@ -44,27 +69,11 @@ const IconText = styled.p`
   font-size: 0.65rem;
   font-weight: 500;
   text-transform: uppercase;
-  position: relative;
-  top: -2px;
 `;
 
 const Img = styled.img`
   height: 24px;
   width: 24px;
   position: relative;
-  top: 5px;
-`;
-
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 25%;
-  &:active {
-    background: linear-gradient(
-      50deg,
-      ${colors.gradientOne},
-      ${colors.gradientTwo}
-    );
-  }
+  top: 6px;
 `;
