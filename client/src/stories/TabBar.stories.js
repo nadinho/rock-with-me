@@ -1,6 +1,6 @@
 import React from "react";
 import TabBar from "../components/TabBar";
-import { Home } from "../assets/icons/Home";
+import { Home, Konzerte, Messages, Profil } from "../assets/icons/Icons";
 
 export default {
   title: "Tab bar navigation",
@@ -8,7 +8,7 @@ export default {
 };
 
 export const Default = () => {
-  const [activeNavItem, setActiveNavItem] = React.useState("Konzerte");
+  const [activeNavItem, setActiveNavItem] = React.useState("Home");
   return (
     <TabBar
       links={[
@@ -18,15 +18,15 @@ export const Default = () => {
         },
         {
           label: "Konzerte",
-          Icon: Home,
+          Icon: Konzerte,
         },
         {
           label: "Messages",
-          Icon: Home,
+          Icon: Messages,
         },
         {
           label: "Profil ",
-          Icon: Home,
+          Icon: Profil,
         },
       ]}
       value={activeNavItem}
