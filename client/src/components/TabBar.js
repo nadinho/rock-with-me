@@ -25,29 +25,31 @@ TabBar.propTypes = {
   onItemClick: PropTypes.func,
 };
 
-const Bar = styled.ul`
+const Bar = styled.div`
   height: 56px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   background: ${colors.background};
   width: 100%;
   position: fixed;
   bottom: 0;
-  list-style: none;
 `;
 
-const NavItem = styled.li`
+const NavItem = styled.button`
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 80px;
-  max-width: 168px;
+  width: 25%;
   cursor: pointer;
-  font-size: 0.8rem;
+  background: none;
+  border: none;
+  outline: none;
   color: ${(props) => (props.active ? colors.gradientOne : colors.primaryText)};
 `;
 
 const Label = styled.label`
   margin-top: 5px;
+  text-transform: uppercase;
+  font-size: 0.7rem;
 `;

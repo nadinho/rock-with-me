@@ -9,11 +9,8 @@ const SVG = styled.svg`
 
 export const Home = ({ active }) => {
   return (
-    <SVG width="24" height="21.913" viewBox="0 0 24 21.913" active={active}>
-      <path
-        d="M12,21.913C34.628,6.679,19.717-5.654,12,2.7,4.283-5.654-10.628,6.679,12,21.913Z"
-        transform="translate(0 0)"
-      />
+    <SVG width="18" height="18" viewBox="0 0 24 21.913" active={active}>
+      <path d="M12 6.453l9 8.375v9.172h-6v-6h-6v6h-6v-9.172l9-8.375zm12 5.695l-12-11.148-12 11.133 1.361 1.465 10.639-9.868 10.639 9.883 1.361-1.465z" />
     </SVG>
   );
 };
@@ -22,8 +19,8 @@ export const Konzerte = ({ active }) => {
   return (
     <SVG
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width="18"
+      height="18"
       viewBox="0 0 24 24"
       active={active}
     >
@@ -35,8 +32,8 @@ export const Messages = ({ active }) => {
   return (
     <SVG
       wxmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width="18"
+      height="18"
       viewBox="0 0 24 24"
       active={active}
     >
@@ -48,8 +45,8 @@ export const Profil = ({ active }) => {
   return (
     <SVG
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width="18"
+      height="18"
       viewBox="0 0 24 24"
       active={active}
     >
