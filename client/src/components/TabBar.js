@@ -13,7 +13,7 @@ export default function TabBar({ links, value, onItemClick }) {
           onClick={() => onItemClick(link.label)}
         >
           <link.Icon active={value === link.label} />
-          {link.label}
+          <Label> {link.label}</Label>
         </NavItem>
       ))}
     </Bar>
@@ -41,9 +41,13 @@ const NavItem = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 25%;
   min-width: 80px;
   max-width: 168px;
   cursor: pointer;
+  font-size: 0.8rem;
   color: ${(props) => (props.active ? colors.gradientOne : colors.primaryText)};
+`;
+
+const Label = styled.label`
+  margin-top: 5px;
 `;
