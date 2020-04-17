@@ -1,16 +1,16 @@
 import React from "react";
-import TabBar from "../components/TabBar";
+import TabNavigation from "../components/TabNavigation";
 import { Home, Konzerte, Messages, Profil } from "../assets/icons/Icons";
 
 export default {
   title: "Tab bar navigation",
-  component: "TabBar",
+  component: "TabNavigation",
 };
 
 export const Default = () => {
   const [activeNavItem, setActiveNavItem] = React.useState("Home");
   return (
-    <TabBar
+    <TabNavigation
       links={[
         {
           label: "Home",
