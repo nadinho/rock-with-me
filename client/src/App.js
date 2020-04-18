@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "@emotion/styled";
 import GlobalStyle from "./GlobalStyle";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Start from "./pages/Start";
@@ -11,7 +12,7 @@ export default function App() {
   return (
     <Router>
       <GlobalStyle />
-      <div>
+      <Main>
         <Switch>
           <Route exact path="/">
             <Start />
@@ -29,7 +30,14 @@ export default function App() {
             <Profil />
           </Route>
         </Switch>
-      </div>
+      </Main>
     </Router>
   );
 }
+
+const Main = styled.main`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+`;
