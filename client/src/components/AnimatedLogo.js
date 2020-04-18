@@ -13,7 +13,7 @@ export default function AnimatedLogo() {
 }
 
 const Container = styled.div`
-  margin-top: 100px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
