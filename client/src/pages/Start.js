@@ -2,11 +2,12 @@ import React from "react";
 import styled from "@emotion/styled";
 import { ButtonFull } from "../components/ButtonFull";
 import { ButtonOutline } from "../components/ButtonOutline";
+import AnimatedLogo from "../components/AnimatedLogo";
 
 export default function Start() {
   return (
     <>
-      <Logo>Rock with me</Logo>
+      <AnimatedLogo />
       <TextContainer>
         <IntroductionHeading>
           Dein Lieblingskünstler ist wieder auf Tour...
@@ -33,7 +34,13 @@ const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 80%;
-  animation: fadeIn 2s ease-in both;
+  margin-top: 50px;
+`;
+
+const IntroductionHeading = styled.p`
+  font-size: 1.25rem;
+  animation-delay: 100ms;
+  animation: fadeIn 1500ms ease-in;
   @keyframes fadeIn {
     from {
       opacity: 0;
@@ -46,30 +53,20 @@ const TextContainer = styled.div`
   }
 `;
 
-const Logo = styled.h1`
-  font-size: 2rem;
-  text-transform: uppercase;
-  margin-top: 100px;
-  animation: fadeInUp ease-in 2s;
-  @keyframes fadeInUp {
+const IntroductionText = styled.p`
+  font-size: 1em;
+  animation: fadeIn 1500ms ease-in;
+  @keyframes fadeIn {
     from {
       opacity: 0;
-      transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, -20%, 0);
     }
     to {
       opacity: 1;
       transform: translate3d(0, 0, 0);
     }
   }
-`;
-
-const IntroductionHeading = styled.p`
-  font-size: 1.25rem;
-  margin-top: 100px;
-`;
-
-const IntroductionText = styled.p`
-  font-size: 1em;
+  animation-delay: 150ms;
 `;
 
 const ButtonContainer = styled.div`
@@ -77,7 +74,8 @@ const ButtonContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
-  animation: fadeIn 2s ease-in both;
+  animation-delay: 200ms;
+  animation: fadeIn 1500ms ease-in both;
   @keyframes fadeIn {
     from {
       opacity: 0;
