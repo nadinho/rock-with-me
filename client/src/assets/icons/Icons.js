@@ -7,7 +7,7 @@ const SVG = styled.svg`
   fill: ${(props) => (props.active ? colors.gradientOne : colors.primaryText)};
 `;
 
-export const Home = ({ active }) => {
+export const HomeIcon = ({ active }) => {
   return (
     <SVG width="18" height="18" viewBox="0 0 24 21.913" active={active}>
       <path d="M12 6.453l9 8.375v9.172h-6v-6h-6v6h-6v-9.172l9-8.375zm12 5.695l-12-11.148-12 11.133 1.361 1.465 10.639-9.868 10.639 9.883 1.361-1.465z" />
@@ -15,7 +15,7 @@ export const Home = ({ active }) => {
   );
 };
 
-export const Konzerte = ({ active }) => {
+export const KonzerteIcon = ({ active }) => {
   return (
     <SVG
       xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +28,7 @@ export const Konzerte = ({ active }) => {
     </SVG>
   );
 };
-export const Messages = ({ active }) => {
+export const MessagesIcon = ({ active }) => {
   return (
     <SVG
       wxmlns="http://www.w3.org/2000/svg"
@@ -41,7 +41,7 @@ export const Messages = ({ active }) => {
     </SVG>
   );
 };
-export const Profil = ({ active }) => {
+export const ProfilIcon = ({ active }) => {
   return (
     <SVG
       xmlns="http://www.w3.org/2000/svg"
@@ -55,18 +55,18 @@ export const Profil = ({ active }) => {
   );
 };
 
-Home.propTypes = {
+HomeIcon.propTypes = {
   active: PropTypes.bool,
 };
 
-Konzerte.propTypes = {
+KonzerteIcon.propTypes = {
   active: PropTypes.bool,
 };
 
-Messages.propTypes = {
+MessagesIcon.propTypes = {
   active: PropTypes.bool,
 };
 
-Profil.propTypes = {
+ProfilIcon.propTypes = {
   active: PropTypes.bool,
 };
