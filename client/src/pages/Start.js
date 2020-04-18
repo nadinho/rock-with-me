@@ -33,12 +33,34 @@ const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
   width: 80%;
+  animation: fadeIn 2s ease-in both;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -20%, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
 `;
 
 const Logo = styled.h1`
   font-size: 2rem;
   text-transform: uppercase;
   margin-top: 100px;
+  animation: fadeInUp ease-in 2s;
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
 `;
 
 const IntroductionHeading = styled.p`
@@ -55,4 +77,15 @@ const ButtonContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin-top: 20px;
+  animation: fadeIn 2s ease-in both;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -20%, 0);
+    }
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
 `;
