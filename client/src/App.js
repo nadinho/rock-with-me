@@ -42,19 +42,19 @@ export default function App() {
       <TabNavigation
         links={[
           {
-            label: "Home",
+            label: "home",
             Icon: HomeIcon,
           },
           {
-            label: "Konzerte",
+            label: "konzerte",
             Icon: KonzerteIcon,
           },
           {
-            label: "Messages",
+            label: "messages",
             Icon: MessagesIcon,
           },
           {
-            label: "Profil ",
+            label: "profil",
             Icon: ProfilIcon,
           },
         ]}
