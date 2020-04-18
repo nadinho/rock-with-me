@@ -1,26 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import styled from "@emotion/styled";
+import GlobalStyle from "./GlobalStyle";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Start from "./pages/Start";
+import Home from "./pages/Home";
+import Konzerte from "./pages/Konzerte";
+import Messages from "./pages/Messages";
+import Profil from "./pages/Profil";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <GlobalStyle />
+      <Main>
+        <Switch>
+          <Route exact path="/">
+            <Start />
+          </Route>
+          <Route path="/home">
+            <Home />
+          </Route>
+          <Route path="/konzerte">
+            <Konzerte />
+          </Route>
+          <Route path="/messages">
+            <Messages />
+          </Route>
+          <Route path="/profil">
+            <Profil />
+          </Route>
+        </Switch>
+      </Main>
+    </Router>
   );
 }
 
-export default App;
+const Main = styled.main`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+`;
