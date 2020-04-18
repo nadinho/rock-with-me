@@ -4,11 +4,19 @@ import GlobalStyle from "./GlobalStyle";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Start from "./pages/Start";
 import Home from "./pages/Home";
-import Konzerte from "./pages/Konzerte";
+import Concerts from "./pages/Concerts";
 import Messages from "./pages/Messages";
-import Profil from "./pages/Profil";
+import Profile from "./pages/Profile";
+import TabNavigation from "./components/TabNavigation";
+import {
+  HomeIcon,
+  KonzerteIcon,
+  MessagesIcon,
+  ProfilIcon,
+} from "./assets/icons/Icons";
 
 export default function App() {
+  const [activeNavItem, setActiveNavItem] = React.useState("Home");
   return (
     <Router>
       <GlobalStyle />
@@ -21,16 +29,38 @@ export default function App() {
             <Home />
           </Route>
           <Route path="/konzerte">
-            <Konzerte />
+            <Concerts />
           </Route>
           <Route path="/messages">
             <Messages />
           </Route>
           <Route path="/profil">
-            <Profil />
+            <Profile />
           </Route>
         </Switch>
       </Main>
+      <TabNavigation
+        links={[
+          {
+            label: "home",
+            Icon: HomeIcon,
+          },
+          {
+            label: "konzerte",
+            Icon: KonzerteIcon,
+          },
+          {
+            label: "messages",
+            Icon: MessagesIcon,
+          },
+          {
+            label: "profil",
+            Icon: ProfilIcon,
+          },
+        ]}
+        value={activeNavItem}
+        onItemClick={(item) => setActiveNavItem(item)}
+      />
     </Router>
   );
 }

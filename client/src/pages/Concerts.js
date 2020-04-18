@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function Konzerte() {
+export default function Concerts() {
   return <div>Konzerte</div>;
 }
