@@ -12,11 +12,8 @@ export const Select = styled.select`
   );
   border-image-slice: 1;
   font-family: "Montserrat", sans-serif;
-  background: transparent;
-  background-size: 10px 100%;
+  background: transparent 10px 100% no-repeat;
   background-position: 0 0, 100% 0;
-  background-repeat: no-repeat;
-  outline: none;
   font-size: 0.9rem;
   color: ${colors.primaryText};
 `;
