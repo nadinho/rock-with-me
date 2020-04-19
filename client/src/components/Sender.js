@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import React from "react";
 import colors from "../utils/colors";
 
-export default function SpeechBubbleOne() {
+export default function Sender() {
   return (
     <Message>
       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
