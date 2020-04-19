@@ -1,6 +1,11 @@
 import React from "react";
 import TabNavigation from "../components/TabNavigation";
-import { Home, Konzerte, Messages, Profil } from "../assets/icons/Icons";
+import {
+  HomeIcon,
+  KonzerteIcon,
+  MessagesIcon,
+  ProfilIcon,
+} from "../assets/icons/Icons";
 
 export default {
   title: "Tab bar navigation",
@@ -14,19 +19,19 @@ export const Default = () => {
       links={[
         {
           label: "Home",
-          Icon: Home,
+          Icon: HomeIcon,
         },
         {
           label: "Konzerte",
-          Icon: Konzerte,
+          Icon: KonzerteIcon,
         },
         {
           label: "Messages",
-          Icon: Messages,
+          Icon: MessagesIcon,
         },
         {
           label: "Profil ",
-          Icon: Profil,
+          Icon: ProfilIcon,
         },
       ]}
       value={activeNavItem}
