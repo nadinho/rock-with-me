@@ -21,7 +21,7 @@ export const fadeIn = keyframes`
       opacity: 1;
       transform: translate3d(0, 0, 0);
     }
-  `;
+`;
 
 export const zoomIn = keyframes`  
     0% {
