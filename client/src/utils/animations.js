@@ -9,7 +9,6 @@ export const fadeInUp = keyframes`
       opacity: 1;
       transform: translate3d(0, 0, 0);
     }
-  
 `;
 
 export const fadeIn = keyframes`
