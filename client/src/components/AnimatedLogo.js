@@ -2,6 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import colors from "../utils/colors";
 import { MusicNote } from "../assets/MusicNote";
+import { fadeInUp } from "../utils/animations";
 
 export default function AnimatedLogo() {
   return (
@@ -18,17 +19,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  animation: fadeInUp ease-in 1500ms;
-  @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translate3d(0, 20%, 0);
-    }
-    to {
-      opacity: 1;
-      transform: translate3d(0, 0, 0);
-    }
-  }
+  animation: ${fadeInUp} ease-in 1500ms;
 `;
 
 const Logo = styled.h1`
