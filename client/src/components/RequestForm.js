@@ -1,9 +1,9 @@
+import styled from "@emotion/styled";
 import React from "react";
 import FloatingInput from "./FloatingInput";
 import PropTypes from "prop-types";
 import FloatingTextArea from "./FloatingTextArea";
 import { Select } from "./Select";
-import { Form } from "./Form";
 
 export default function RequestForm({
   artist,
@@ -37,12 +37,18 @@ export default function RequestForm({
   );
 }
 
+const Form = styled.form`
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+`;
+
 RequestForm.propTypes = {
   artist: PropTypes.string,
-  date: PropTypes.number,
+  date: PropTypes.string,
   location: PropTypes.string,
   city: PropTypes.string,
   arrival: PropTypes.string,
-  price: PropTypes.number,
+  price: PropTypes.string,
   text: PropTypes.string,
 };
