@@ -70,4 +70,5 @@ const Main = styled.main`
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  align-items: center;
 `;

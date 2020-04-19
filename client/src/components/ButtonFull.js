@@ -7,6 +7,7 @@ export const ButtonFull = styled.button`
   border-radius: 6px;
   border: none;
   outline: none;
+  margin: 10px;
   background: linear-gradient(
     50deg,
     ${colors.gradientOne},
@@ -16,4 +17,6 @@ export const ButtonFull = styled.button`
   font-weight: 500;
   color: ${colors.primaryText};
   text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
 `;
