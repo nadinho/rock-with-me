@@ -2,7 +2,7 @@ import styled from "@emotion/styled";
 import colors from "../utils/colors";
 import React from "react";
 
-export default function MessageTwo() {
+export default function Receiver() {
   return (
     <Message>
       Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy

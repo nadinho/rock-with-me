@@ -1,26 +1,74 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import styled from "@emotion/styled";
+import GlobalStyle from "./GlobalStyle";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Start from "./pages/Start";
+import Home from "./pages/Home";
+import Concerts from "./pages/Concerts";
+import Messages from "./pages/Messages";
+import Profile from "./pages/Profile";
+import TabNavigation from "./components/TabNavigation";
+import {
+  HomeIcon,
+  KonzerteIcon,
+  MessagesIcon,
+  ProfilIcon,
+} from "./assets/icons/Icons";
 
-function App() {
+export default function App() {
+  const [activeNavItem, setActiveNavItem] = React.useState("Home");
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <GlobalStyle />
+      <Main>
+        <Switch>
+          <Route exact path="/">
+            <Start />
+          </Route>
+          <Route path="/home">
+            <Home />
+          </Route>
+          <Route path="/konzerte">
+            <Concerts />
+          </Route>
+          <Route path="/messages">
+            <Messages />
+          </Route>
+          <Route path="/profil">
+            <Profile />
+          </Route>
+        </Switch>
+      </Main>
+      <TabNavigation
+        links={[
+          {
+            label: "home",
+            Icon: HomeIcon,
+          },
+          {
+            label: "konzerte",
+            Icon: KonzerteIcon,
+          },
+          {
+            label: "messages",
+            Icon: MessagesIcon,
+          },
+          {
+            label: "profil",
+            Icon: ProfilIcon,
+          },
+        ]}
+        value={activeNavItem}
+        onItemClick={(item) => setActiveNavItem(item)}
+      />
+    </Router>
   );
 }
 
-export default App;
+const Main = styled.main`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+`;

@@ -1,8 +1,8 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import MessageOne from "../components/MessageOne";
-import MessageTwo from "../components/MessageTwo";
+import Sender from "../components/Sender";
+import Receiver from "../components/Receiver";
 
 storiesOf("Messages", module)
-  .add("One", () => <MessageOne />)
-  .add("Two", () => <MessageTwo />);
+  .add("Sender", () => <Sender />)
+  .add("Receiver", () => <Receiver />);
