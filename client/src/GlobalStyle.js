@@ -21,6 +21,7 @@ export default function GlobalStyle() {
           background-image: url(${Background});
           background-repeat: no-repeat;
           background-size: cover;
+          background-attachment: fixed;
         }
       `}
     />

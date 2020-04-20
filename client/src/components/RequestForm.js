@@ -1,11 +1,12 @@
-import styled from "@emotion/styled";
 import React from "react";
+import styled from "@emotion/styled";
 import PropTypes from "prop-types";
+import FloatingTextArea from "./FloatingTextArea";
 import { Dropdown } from "./Dropdown";
+import { Form } from "./Form";
 import { Input } from "./Input";
 import { FloatingLabel } from "./FloatingLabel";
 import { ButtonFull } from "./ButtonFull";
-import { Textarea } from "./Textarea";
 
 export default function RequestForm() {
   const [artist, setArtist] = React.useState("");
@@ -103,16 +104,16 @@ export default function RequestForm() {
         />
         <FloatingLabel>Ticketpreis</FloatingLabel>
       </Wrapper>
-      <Wrapper>
-        <Textarea
-          required
-          value={text}
-          onChange={(event) => {
-            setText(event.target.value);
-          }}
-        />
-        <FloatingLabel>Hier kommt dein Text rein</FloatingLabel>
-      </Wrapper>
+
+      <FloatingTextArea
+        required
+        value={text}
+        onChange={(event) => {
+          setText(event.target.value);
+        }}
+      >
+        Platz für Details
+      </FloatingTextArea>
       <ButtonFull>Absenden</ButtonFull>
     </Form>
   );
@@ -120,12 +121,6 @@ export default function RequestForm() {
 
 const Wrapper = styled.div`
   position: relative;
-`;
-
-const Form = styled.form`
-  width: 80%;
-  display: flex;
-  flex-direction: column;
 `;
 
 RequestForm.propTypes = {

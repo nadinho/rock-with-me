@@ -2,22 +2,20 @@ import styled from "@emotion/styled";
 import colors from "../utils/colors";
 
 export const Dropdown = styled.select`
-  width: 90%;
-  height: 40px;
+  width: 80%;
   margin: 15px 10px;
-  border-right: 1px solid transparent;
+  padding: 5px 0px 15px 5px;
+  border-right: 2px solid transparent;
   border-image: linear-gradient(
     50deg,
     ${colors.gradientOne},
     ${colors.gradientTwo}
   );
   border-image-slice: 1;
-  background: transparent;
-  background-size: 10px 100%;
+  background: transparent 10px 100% no-repeat;
   background-position: 0 0, 100% 0;
-  background-repeat: no-repeat;
-  outline: none;
   font-size: 0.9rem;
   color: ${colors.primaryText};
+  background: transparent;
   font-family: inherit;
 `;
