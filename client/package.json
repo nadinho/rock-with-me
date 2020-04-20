@@ -20,7 +20,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public -o build/storybook"
+    "build-storybook": "build-storybook -s public -o build/storybook",
+    "api": "json-server --watch db.json --port 4000"
   },
   "browserslist": {
     "production": [
@@ -39,7 +40,8 @@
     "@storybook/addon-knobs": "^5.3.18",
     "@storybook/addon-links": "^5.3.18",
     "@storybook/addons": "^5.3.18",
-    "@storybook/react": "^5.3.18"
+    "@storybook/react": "^5.3.18",
+    "json-server": "^0.16.1"
   },
   "proxy": "http://localhost:8080"
 }

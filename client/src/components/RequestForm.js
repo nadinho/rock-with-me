@@ -7,6 +7,7 @@ import { Form } from "./Form";
 import { Input } from "./Input";
 import { FloatingLabel } from "./FloatingLabel";
 import { ButtonFull } from "./ButtonFull";
+import { postConcert } from "../api/Concerts";
 
 export default function RequestForm() {
   const [artist, setArtist] = React.useState("");
@@ -16,11 +17,14 @@ export default function RequestForm() {
   const [arrival, setArrival] = React.useState("");
   const [price, setPrice] = React.useState("");
   const [detailText, setDetailText] = React.useState("");
+  // const [isLoading, setIsLoading] = React.useState(false);
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
 
-    const request = {
+    // setIsLoading(true);
+
+    const concert = {
       artist,
       date,
       location,
@@ -30,12 +34,12 @@ export default function RequestForm() {
       detailText,
     };
 
-    alert(JSON.stringify(request));
+    await postConcert(concert);
   }
 
-  function handleClick() {
-    alert("Gesendet!");
-  }
+  // if (isLoading) {
+  //   return <div>Loading...</div>;
+  // }
 
   return (
     <Form onSubmit={handleSubmit}>
@@ -119,7 +123,7 @@ export default function RequestForm() {
         Platz für Details
       </FloatingTextArea>
 
-      <ButtonFull onClick={handleClick}>Absenden</ButtonFull>
+      <ButtonFull>Absenden</ButtonFull>
     </Form>
   );
 }

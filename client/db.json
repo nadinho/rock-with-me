@@ -1,0 +1,11 @@
+{
+  "concerts": {
+    "artist": "Tocotronic",
+    "date": "2020-04-25",
+    "location": "FZW",
+    "city": "Dortmund",
+    "arrival": "fahrrad",
+    "price": "45",
+    "detailText": "Hi Freaks"
+  }
+}
