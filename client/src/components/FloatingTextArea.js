@@ -16,6 +16,7 @@ const Wrapper = styled.div`
 `;
 
 const TextArea = styled.textarea`
+  width: 80%;
   margin: 15px 10px;
   border-right: 2px solid transparent;
   border-image: linear-gradient(
@@ -29,7 +30,6 @@ const TextArea = styled.textarea`
   background-size: 10px 100%;
   background-position: 0 0, 100% 0;
   background-repeat: no-repeat;
-  outline: none;
   font-size: 1rem;
   color: ${colors.primaryText};
   padding: 10px;

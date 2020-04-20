@@ -2,7 +2,7 @@ import React from "react";
 import FloatingInput from "./FloatingInput";
 import PropTypes from "prop-types";
 import FloatingTextArea from "./FloatingTextArea";
-import { Select } from "./Select";
+import { Dropdown } from "./Dropdown";
 import { Form } from "./Form";
 
 export default function RequestForm({
@@ -22,7 +22,7 @@ export default function RequestForm({
       </FloatingInput>
       <FloatingInput value={location}>Veranstaltungsort</FloatingInput>
       <FloatingInput value={city}>Stadt</FloatingInput>
-      <Select value={arrival}>
+      <Dropdown value={arrival}>
         <option value="">Wie willst du anreisen?</option>
         <option value="auto">Auto</option>
         <option value="öpnv">ÖPNV</option>
@@ -30,7 +30,7 @@ export default function RequestForm({
         <option value="fuß">Zu Fuß</option>
         <option value="mitfahrgelegenheit">Mitfahrgelegenheit</option>
         <option value="sonstiges">Sonstiges</option>
-      </Select>
+      </Dropdown>
       <FloatingInput value={price}>Ticketpreis</FloatingInput>
       <FloatingTextArea value={text}>Schreibe hier einen Text</FloatingTextArea>
     </Form>

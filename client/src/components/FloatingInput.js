@@ -16,6 +16,7 @@ const Wrapper = styled.div`
 `;
 
 const Input = styled.input`
+  width: 80%;
   margin: 15px 10px;
   border-right: 2px solid transparent;
   border-image: linear-gradient(
