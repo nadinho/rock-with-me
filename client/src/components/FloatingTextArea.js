@@ -16,9 +16,9 @@ const Wrapper = styled.div`
 `;
 
 const TextArea = styled.textarea`
-  width: 90%;
+  width: 300px;
   height: 300px;
-  margin: 15px 10px;
+  margin: 30px 10px;
   border-right: 2px solid transparent;
   border-image: linear-gradient(
     50deg,
@@ -38,16 +38,16 @@ const TextArea = styled.textarea`
 const Label = styled.label`
   position: absolute;
   pointer-events: none;
-  left: 20px;
-  top: 22px;
+  left: 28px;
+  top: 44px;
   transition: 0.2s ease all;
   TextArea:focus ~ & {
-    top: -8px;
+    top: 4px;
     left: 14px;
     font-size: 0.75rem;
   }
   TextArea:valid ~ & {
-    top: -8px;
+    top: 4px;
     left: 14px;
     font-size: 0.75rem;
   }

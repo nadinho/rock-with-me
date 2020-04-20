@@ -33,6 +33,10 @@ export default function RequestForm() {
     alert(JSON.stringify(request));
   }
 
+  function handleClick() {
+    alert("Gesendet!");
+  }
+
   return (
     <Form onSubmit={handleSubmit}>
       <Wrapper>
@@ -115,7 +119,7 @@ export default function RequestForm() {
         Platz für Details
       </FloatingTextArea>
 
-      <ButtonFull>Absenden</ButtonFull>
+      <ButtonFull onClick={handleClick}>Absenden</ButtonFull>
     </Form>
   );
 }
