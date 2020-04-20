@@ -1,18 +1,27 @@
 import styled from "@emotion/styled";
 import React from "react";
-import colors from "../utils/colors";
-import Location from "../assets/icons/location.png";
-import Date from "../assets/icons/date.png";
-import Euro from "../assets/icons/euro.png";
-import Train from "../assets/icons/train.png";
+
+import { InfoContainer } from "./InfoContainer";
+import { Card } from "./Card";
+import { ContentContainer } from "./ContentContainer";
+import ProfilePictures from "../ProfilePictures";
+import { RowContainer } from "./RowContainer";
+import { Title } from "./Title";
+import { CardButton } from "./CardButton";
+
+import Location from "../../assets/icons/location.png";
+import Date from "../../assets/icons/date.png";
+import Euro from "../../assets/icons/euro.png";
+import Train from "../../assets/icons/train.png";
 
 export default function ConcertCardBig() {
   return (
-    <Card>
+    <Card size="big">
       <ContentContainer>
         <RowContainer>
-          <Title>Love A</Title>
-          <Picture
+          <Title size="big">Love A</Title>
+          <ProfilePictures
+            size="big"
             src={
               "https://images.unsplash.com/photo-1499887142886-791eca5918cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80"
             }
@@ -20,7 +29,7 @@ export default function ConcertCardBig() {
           />
         </RowContainer>
 
-        <DetailsContainer>
+        <InfoContainer>
           <RowContainer>
             <DetailsItem>
               <Icon src={Date} />
@@ -44,7 +53,7 @@ export default function ConcertCardBig() {
               <Detail>34 Euro</Detail>
             </DetailsItem>
           </RowContainer>
-        </DetailsContainer>
+        </InfoContainer>
 
         <MitrockerContainer>
           <Mitrocker>Mitrocker</Mitrocker>
@@ -55,7 +64,7 @@ export default function ConcertCardBig() {
           </RowContainer>
         </MitrockerContainer>
 
-        <CardButton>Mehr</CardButton>
+        <CardButton size="big">Mehr</CardButton>
       </ContentContainer>
     </Card>
   );
@@ -77,61 +86,8 @@ const DetailsItem = styled.div`
   justify-content: flex-start;
 `;
 
-const ContentContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin: 10px 20px;
-`;
-
-const RowContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`;
-
-const Card = styled.div`
-  background: ${colors.background};
-  width: 380px;
-  padding: 10px 5px;
-  border-radius: 6px;
-`;
-
-const Picture = styled.img`
-  border-radius: 100px;
-  height: 60px;
-  width: 60px;
-`;
-
-const Title = styled.h3`
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: ${colors.primaryText};
-  text-transform: uppercase;
-  &::after {
-    content: "";
-    display: block;
-    height: 2px;
-    position: relative;
-    top: 4px;
-    left: 22px;
-    background: linear-gradient(
-      50deg,
-      ${colors.gradientOne},
-      ${colors.gradientTwo}
-    );
-    width: 70px;
-  }
-`;
-
-const DetailsContainer = styled.div`
-  line-height: 0.8px;
-  margin: 25px 0 25px 0;
-`;
-
 const Detail = styled.p`
   font-weight: 400;
-  font-family: "Montserrat", sans-serif;
 `;
 
 const Mitrocker = styled.p`
@@ -145,20 +101,4 @@ const Buddies = styled.img`
   height: 24px;
   width: 24px;
   margin: -3px;
-`;
-
-const CardButton = styled.button`
-  padding: 4px 16px;
-  background: linear-gradient(
-    50deg,
-    ${colors.gradientOne},
-    ${colors.gradientTwo}
-  );
-  border: none;
-  border-radius: 20px;
-  font-weight: 500;
-  outline: none;
-  align-self: flex-end;
-  margin-top: 12px;
-  text-transform: uppercase;
 `;
