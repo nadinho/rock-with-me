@@ -8,6 +8,8 @@ import Concerts from "./pages/Concerts";
 import Messages from "./pages/Messages";
 import Profile from "./pages/Profile";
 import NewRequest from "./pages/NewRequest";
+import ConcertRequest from "./pages/ConcertRequest";
+
 import TabNavigation from "./components/TabNavigation";
 import {
   HomeIcon,
@@ -36,6 +38,10 @@ export default function App() {
 
           <Route path="/konzertanfrage">
             <NewRequest />
+          </Route>
+
+          <Route path="/:id">
+            <ConcertRequest />
           </Route>
 
           <Route path="/messages">
