@@ -1,17 +1,23 @@
 import styled from "@emotion/styled";
 import React from "react";
-import colors from "../utils/colors";
+
+import { Card } from "./Card";
+import ProfilePictures from "../ProfilePictures";
+import { RowContainer } from "./RowContainer";
+import { Title } from "./Title";
+import { CardButton } from "./CardButton";
 
 export default function ConcertCardSmall() {
   return (
     <>
       <Picture
+        size="small"
         src={
           "https://images.unsplash.com/photo-1499887142886-791eca5918cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80"
         }
       />
-      <Card>
-        <Title>Love A</Title>
+      <Card size="small">
+        <Title size="small">Love A</Title>
         <TextContainer>
           <Date>25. November 2020</Date>
           <Location>Gebäude 9, Köln</Location>
@@ -25,55 +31,16 @@ export default function ConcertCardSmall() {
           </RowContainer>
         </RowContainer>
 
-        <CardButton>Mehr</CardButton>
+        <CardButton size="small">Mehr</CardButton>
       </Card>
     </>
   );
 }
 
-const RowContainer = styled.div`
-  display: flex;
-  align-items: center;
-`;
-
-const Card = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: ${colors.background};
-  width: 160px;
-  padding: 10px 5px;
-  border-radius: 6px;
-`;
-
-const Picture = styled.img`
-  border-radius: 100px;
-  height: 40px;
-  width: 40px;
+const Picture = styled(ProfilePictures)`
   position: relative;
   top: 25px;
   left: 10px;
-`;
-
-const Title = styled.h3`
-  font-size: 1rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  &::after {
-    content: "";
-    display: block;
-    height: 1px;
-    position: relative;
-    top: 2px;
-    left: 8px;
-    background: linear-gradient(
-      50deg,
-      ${colors.gradientOne},
-      ${colors.gradientTwo}
-    );
-    width: 50px;
-  }
 `;
 
 const TextContainer = styled.div`
@@ -103,22 +70,4 @@ const Buddies = styled.img`
   height: 16px;
   width: 16px;
   margin: -3px;
-`;
-
-const CardButton = styled.button`
-  padding: 2px 13px;
-  background: linear-gradient(
-    50deg,
-    ${colors.gradientOne},
-    ${colors.gradientTwo}
-  );
-  border: none;
-  color: white;
-  border-radius: 20px;
-  font-size: 0.5rem;
-  font-weight: 500;
-  outline: none;
-  align-self: flex-end;
-  margin-top: 12px;
-  text-transform: uppercase;
 `;
