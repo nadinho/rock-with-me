@@ -10,6 +10,8 @@ import { ContentContainer } from "./ContentContainer";
 import ProfilePictures from "../ProfilePictures";
 import { RowContainer } from "./RowContainer";
 import { Title } from "./Title";
+import { ButtonFull } from "../ButtonFull";
+import { ButtonContainer } from "../ButtonContainer";
 
 export default function ConcertCardSingle() {
   return (
@@ -60,6 +62,9 @@ export default function ConcertCardSingle() {
           zusammenfahren würde.
         </TextContainer>
       </RowContainer>
+      <ButtonContainer>
+        <ButtonFull>Nachricht an Selina</ButtonFull>
+      </ButtonContainer>
     </ContentContainer>
   );
 }
