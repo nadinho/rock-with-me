@@ -6,7 +6,6 @@ export const ButtonFull = styled.button`
   width: 218px;
   border-radius: 6px;
   border: none;
-  outline: none;
   margin: 10px;
   background: linear-gradient(
     50deg,

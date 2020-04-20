@@ -1,6 +1,7 @@
 import React from "react";
 import { addDecorator } from "@storybook/react";
 import GlobalStyles from "../src/GlobalStyle";
+import { withKnobs } from "@storybook/addon-knobs";
 
 const GlobalStyleDecorator = (storyFn) => (
   <>
@@ -9,3 +10,4 @@ const GlobalStyleDecorator = (storyFn) => (
   </>
 );
 addDecorator(GlobalStyleDecorator);
+addDecorator(withKnobs);
