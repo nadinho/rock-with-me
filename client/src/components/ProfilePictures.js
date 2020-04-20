@@ -6,7 +6,8 @@ const ProfilePicture = styled.img`
 `;
 
 const profilePictureSizes = {
-  small: { height: "16px" },
+  extraSmall: { height: "16px" },
+  small: { height: "30px" },
   medium: { height: "40px" },
   big: { height: "60px" },
 };
