@@ -1,10 +1,9 @@
 import styled from "@emotion/styled";
 import colors from "../utils/colors";
 
-export const Dropdown = styled.select`
-  width: 80%;
+export const Textarea = styled.textarea`
+  width: 90%;
   margin: 15px 10px;
-  padding: 5px 0px 15px 5px;
   border-right: 2px solid transparent;
   border-image: linear-gradient(
     50deg,
@@ -12,10 +11,14 @@ export const Dropdown = styled.select`
     ${colors.gradientTwo}
   );
   border-image-slice: 1;
-  background: transparent 10px 100% no-repeat;
-  background-position: 0 0, 100% 0;
-  font-size: 0.9rem;
-  color: ${colors.primaryText};
+  font-family: "Montserrat", sans-serif;
   background: transparent;
-  font-family: inherit;
+  background-size: 10px 100%;
+  background-position: 0 0, 100% 0;
+  background-repeat: no-repeat;
+  outline: none;
+  font-size: 1rem;
+  color: ${colors.primaryText};
+  padding: 10px;
+  caret-color: ${colors.gradientTwo};
 `;
