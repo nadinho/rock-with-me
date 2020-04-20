@@ -5,7 +5,7 @@ import colors from "../utils/colors";
 export default function FloatingTextArea(props) {
   return (
     <Wrapper>
-      <TextArea required />
+      <TextArea {...props} />
       <Label {...props}></Label>
     </Wrapper>
   );
