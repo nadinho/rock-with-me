@@ -16,7 +16,8 @@ const Wrapper = styled.div`
 `;
 
 const TextArea = styled.textarea`
-  width: 80%;
+  width: 90%;
+  height: 300px;
   margin: 15px 10px;
   border-right: 2px solid transparent;
   border-image: linear-gradient(
@@ -25,11 +26,9 @@ const TextArea = styled.textarea`
     ${colors.gradientTwo}
   );
   border-image-slice: 1;
-  font-family: "Montserrat", sans-serif;
-  background: transparent;
+  font-family: inherit;
+  background: transparent 10px 100% no-repeat;
   background-size: 10px 100%;
-  background-position: 0 0, 100% 0;
-  background-repeat: no-repeat;
   font-size: 1rem;
   color: ${colors.primaryText};
   padding: 10px;

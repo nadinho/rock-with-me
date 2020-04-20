@@ -11,17 +11,15 @@ export const Input = styled.input`
     ${colors.gradientTwo}
   );
   border-image-slice: 1;
-  font-family: "Montserrat", sans-serif;
-  background: transparent;
-  background-size: 10px 100%;
-  background-position: 0 0, 100% 0;
-  background-repeat: no-repeat;
-  outline: none;
+  font-family: inherit;
+  background: transparent 10px 100% no-repeat;
   font-size: 1rem;
   color: ${colors.primaryText};
   padding: 10px;
   caret-color: ${colors.gradientTwo};
   &::-webkit-datetime-edit {
     padding-left: 80px;
+    font-size: 0.9rem;
+    opacity: 0.8;
   }
 `;

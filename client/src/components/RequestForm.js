@@ -15,7 +15,7 @@ export default function RequestForm() {
   const [city, setCity] = React.useState("");
   const [arrival, setArrival] = React.useState("");
   const [price, setPrice] = React.useState("");
-  const [text, setText] = React.useState("");
+  const [detailText, setDetailText] = React.useState("");
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -27,7 +27,7 @@ export default function RequestForm() {
       city,
       arrival,
       price,
-      text,
+      detailText,
     };
 
     alert(JSON.stringify(request));
@@ -107,9 +107,9 @@ export default function RequestForm() {
 
       <FloatingTextArea
         required
-        value={text}
+        value={detailText}
         onChange={(event) => {
-          setText(event.target.value);
+          setDetailText(event.target.value);
         }}
       >
         Platz für Details
@@ -131,5 +131,5 @@ RequestForm.propTypes = {
   city: PropTypes.string,
   arrival: PropTypes.string,
   price: PropTypes.number,
-  text: PropTypes.string,
+  detailText: PropTypes.string,
 };
