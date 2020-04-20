@@ -1,8 +1,12 @@
 import React from "react";
-import { storiesOf } from "@storybook/react";
-import ConcertCardSmall from "../components/ConcertCardSmall";
-import ConcertCardBig from "../components/ConcertCardBig";
+import ConcertCardSmall from "../components/cards/ConcertCardSmall";
+import ConcertCardBig from "../components/cards/ConcertCardBig";
+import ConcertCardSingle from "../components/cards/ConcertCardSingle";
 
-storiesOf("ConcertCard", module)
-  .add("ConcertCard small", () => <ConcertCardSmall />)
-  .add("ConcertCard big", () => <ConcertCardBig />);
+export default {
+  title: "Cards",
+};
+
+export const small = () => <ConcertCardSmall />;
+export const big = () => <ConcertCardBig />;
+export const single = () => <ConcertCardSingle />;
