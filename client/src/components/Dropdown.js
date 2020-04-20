@@ -2,9 +2,9 @@ import styled from "@emotion/styled";
 import colors from "../utils/colors";
 
 export const Dropdown = styled.select`
-  width: 90%;
-  margin: 15px 10px;
-  padding: 5px 0px 15px 5px;
+  width: 300px;
+  margin: 30px 10px;
+  padding: 10px 0px 10px 15px;
   border-right: 2px solid transparent;
   border-image: linear-gradient(
     50deg,
