@@ -2,16 +2,16 @@ import React from "react";
 import styled from "@emotion/styled";
 import { useHistory } from "react-router-dom";
 
-import GoBackHeader from "../components/GoBackHeader";
+import GoBackHeader from "../components/header/GoBackHeader";
 import { IntroductionHeading } from "../components/textStyling/IntroductionHeading";
 import { IntroductionText } from "../components/textStyling/IntroductionText";
 import { TextContainer } from "../components/textStyling/TextContainer";
-import FloatingTextArea from "../components/FloatingTextArea";
-import { Dropdown } from "../components/Dropdown";
-import { Form } from "../components/Form";
-import { Input } from "../components/Input";
-import { FloatingLabel } from "../components/FloatingLabel";
-import { ButtonFull } from "../components/ButtonFull";
+import FloatingTextArea from "../components/forms/FloatingTextArea";
+import { Dropdown } from "../components/forms/Dropdown";
+import { Form } from "../components/forms/Form";
+import { Input } from "../components/forms/Input";
+import { FloatingLabel } from "../components/forms/FloatingLabel";
+import { ButtonFull } from "../components/buttons/ButtonFull";
 import { postConcert } from "../api/concerts";
 
 export default function NewConcert() {

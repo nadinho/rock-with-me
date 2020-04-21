@@ -6,7 +6,7 @@ import { Dropdown } from "./Dropdown";
 import { Form } from "./Form";
 import { Input } from "./Input";
 import { FloatingLabel } from "./FloatingLabel";
-import { ButtonFull } from "./ButtonFull";
+import { ButtonFull } from "../buttons/ButtonFull";
 import { postConcert } from "../api/concerts";
 
 export default function RequestForm() {

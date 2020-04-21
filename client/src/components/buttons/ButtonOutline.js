@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import { ButtonFull } from "./ButtonFull";
-import colors from "../utils/colors";
+import colors from "../../utils/colors";
 
 export const ButtonOutline = styled(ButtonFull)`
   border-left: 3px solid ${colors.gradientOne};
