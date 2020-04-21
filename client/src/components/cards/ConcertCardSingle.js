@@ -10,8 +10,8 @@ import { ContentContainer } from "./ContentContainer";
 import ProfilePictures from "../ProfilePictures";
 import { RowContainer } from "./RowContainer";
 import { Title } from "./Title";
-import { ButtonFull } from "../ButtonFull";
-import { ButtonContainer } from "../ButtonContainer";
+import { ButtonFull } from "../buttons/ButtonFull";
+import { ButtonContainer } from "../buttons/ButtonContainer";
 
 export default function ConcertCardSingle() {
   return (
