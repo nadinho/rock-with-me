@@ -7,7 +7,7 @@ import { IntroductionHeading } from "../components/textStyling/IntroductionHeadi
 import { IntroductionText } from "../components/textStyling/IntroductionText";
 import { TextContainer } from "../components/textStyling/TextContainer";
 import FloatingTextArea from "../components/forms/FloatingTextArea";
-import { Dropdown } from "../components/forms/Dropdown";
+import ArrivalDropdown from "../components/forms/ArrivalDropdown";
 import { Form } from "../components/forms/Form";
 import { Input } from "../components/forms/Input";
 import { FloatingLabel } from "../components/forms/FloatingLabel";
@@ -94,21 +94,12 @@ export default function NewConcert() {
           <FloatingLabel>Stadt</FloatingLabel>
         </Wrapper>
         <Wrapper>
-          <Dropdown
-            required
+          <ArrivalDropdown
             value={arrival}
             onChange={(event) => {
               setArrival(event.target.value);
             }}
-          >
-            <option value="">Wie willst du anreisen?</option>
-            <option value="Auto">Auto</option>
-            <option value="Zug">ÖPNV</option>
-            <option value="Fahrrad">Fahrrad</option>
-            <option value="Fuß">Zu Fuß</option>
-            <option value="Mitfahrgelegenheit">Mitfahrgelegenheit</option>
-            <option value="Sonstiges">Sonstiges</option>
-          </Dropdown>
+          ></ArrivalDropdown>
         </Wrapper>
         <Wrapper>
           <Input
