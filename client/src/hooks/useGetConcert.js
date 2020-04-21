@@ -1,5 +1,5 @@
 import React from "react";
-import { getConcert } from "../api/Concerts";
+import { getConcert } from "../api/concerts";
 
 export default function useGetConcert(concertId) {
   const [concert, setConcert] = React.useState(null);
