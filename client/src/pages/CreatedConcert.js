@@ -41,26 +41,26 @@ export default function CreateConcert() {
           <RowContainer>
             <DetailsItem>
               <Icon src={Date} />
-              <Detail>{concert.date}</Detail>
+              <p>{concert.date}</p>
             </DetailsItem>
 
             <DetailsItem>
               <Icon src={Train} />
-              <Detail>{concert.arrival}</Detail>
+              <p>{concert.arrival}</p>
             </DetailsItem>
           </RowContainer>
 
           <RowContainer>
             <DetailsItem>
               <Icon src={Location} />
-              <Detail>
+              <p>
                 {concert.location}, {concert.city}
-              </Detail>
+              </p>
             </DetailsItem>
 
             <DetailsItem>
               <Icon src={Euro} />
-              <Detail>{concert.price}</Detail>
+              <p>{concert.price}</p>
             </DetailsItem>
           </RowContainer>
         </InfoContainer>
@@ -99,8 +99,4 @@ const DetailsItem = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-`;
-
-const Detail = styled.p`
-  font-weight: 400;
 `;
