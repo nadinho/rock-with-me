@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import BackArrow from "../assets/icons/back-arrow.png";
+import BackArrow from "../../assets/icons/back-arrow.png";
 
 export default function GoBackHeader(props) {
   return (

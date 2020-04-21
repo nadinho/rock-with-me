@@ -1,5 +1,5 @@
 import React from "react";
-import RequestForm from "../components/RequestForm";
+import RequestForm from "../components/forms/RequestForm";
 
 export default {
   title: "Forms",

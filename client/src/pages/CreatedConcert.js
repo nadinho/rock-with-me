@@ -6,15 +6,15 @@ import Location from "../assets/icons/location.png";
 import Date from "../assets/icons/date.png";
 import Euro from "../assets/icons/euro.png";
 import Train from "../assets/icons/train.png";
-import GoBackHeader from "../components/GoBackHeader";
+import GoBackHeader from "../components/header/GoBackHeader";
 
 import { InfoContainer } from "../components/cards/InfoContainer";
 import { ContentContainer } from "../components/cards/ContentContainer";
 import ProfilePictures from "../components/ProfilePictures";
 import { RowContainer } from "../components/cards/RowContainer";
 import { Title } from "../components/cards/Title";
-import { ButtonFull } from "../components/ButtonFull";
-import { ButtonContainer } from "../components/ButtonContainer";
+import { ButtonFull } from "../components/buttons/ButtonFull";
+import { ButtonContainer } from "../components/buttons/ButtonContainer";
 
 import useGetConcert from "../hooks/useGetConcert";
 
@@ -41,26 +41,26 @@ export default function CreateConcert() {
           <RowContainer>
             <DetailsItem>
               <Icon src={Date} />
-              <Detail>{concert.date}</Detail>
+              <p>{concert.date}</p>
             </DetailsItem>
 
             <DetailsItem>
               <Icon src={Train} />
-              <Detail>{concert.arrival}</Detail>
+              <p>{concert.arrival}</p>
             </DetailsItem>
           </RowContainer>
 
           <RowContainer>
             <DetailsItem>
               <Icon src={Location} />
-              <Detail>
+              <p>
                 {concert.location}, {concert.city}
-              </Detail>
+              </p>
             </DetailsItem>
 
             <DetailsItem>
               <Icon src={Euro} />
-              <Detail>{concert.price}</Detail>
+              <p>{concert.price}</p>
             </DetailsItem>
           </RowContainer>
         </InfoContainer>
@@ -99,8 +99,4 @@ const DetailsItem = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-`;
-
-const Detail = styled.p`
-  font-weight: 400;
 `;
