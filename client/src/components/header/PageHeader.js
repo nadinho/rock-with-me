@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import React from "react";
-import Logo from "../assets/icons/platzhalter-logo.png";
-import BuddyRequest from "../assets/icons/add-icon.png";
+import Logo from "../../assets/icons/platzhalter-logo.png";
+import BuddyRequest from "../../assets/icons/add-icon.png";
 
 export default function PageHeader(props) {
   return (
