@@ -12,7 +12,7 @@ import { Form } from "../components/Form";
 import { Input } from "../components/Input";
 import { FloatingLabel } from "../components/FloatingLabel";
 import { ButtonFull } from "../components/ButtonFull";
-import { postConcert } from "../api/concerts";
+import { postConcert } from "../api/Concerts";
 
 export default function NewConcert() {
   const history = useHistory();
