@@ -40,7 +40,7 @@ export default function App() {
             <NewRequest />
           </Route>
 
-          <Route path="/:id">
+          <Route path="/concerts/:concertId">
             <ConcertRequest />
           </Route>
 
