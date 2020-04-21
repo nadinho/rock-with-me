@@ -7,8 +7,8 @@ import Home from "./pages/Home";
 import Concerts from "./pages/Concerts";
 import Messages from "./pages/Messages";
 import Profile from "./pages/Profile";
-import NewRequest from "./pages/NewRequest";
-import ConcertRequest from "./pages/ConcertRequest";
+import NewConcert from "./pages/NewConcert";
+import CreatedConcert from "./pages/CreatedConcert";
 
 import TabNavigation from "./components/TabNavigation";
 import {
@@ -36,12 +36,12 @@ export default function App() {
             <Concerts />
           </Route>
 
-          <Route path="/konzertanfrage">
-            <NewRequest />
+          <Route path="/newconcert">
+            <NewConcert />
           </Route>
 
           <Route path="/concerts/:concertId">
-            <ConcertRequest />
+            <CreatedConcert />
           </Route>
 
           <Route path="/messages">

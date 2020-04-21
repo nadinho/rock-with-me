@@ -12,7 +12,7 @@ import { Form } from "../components/Form";
 import { Input } from "../components/Input";
 import { FloatingLabel } from "../components/FloatingLabel";
 import { ButtonFull } from "../components/ButtonFull";
-import { postConcert } from "../api/Concerts";
+import { postConcert } from "../api/concerts";
 
 export default function NewConcert() {
   const history = useHistory();
@@ -102,12 +102,12 @@ export default function NewConcert() {
             }}
           >
             <option value="">Wie willst du anreisen?</option>
-            <option value="auto">Auto</option>
-            <option value="öpnv">ÖPNV</option>
-            <option value="fahrrad">Fahrrad</option>
-            <option value="fuß">Zu Fuß</option>
-            <option value="mitfahrgelegenheit">Mitfahrgelegenheit</option>
-            <option value="sonstiges">Sonstiges</option>
+            <option value="Auto">Auto</option>
+            <option value="Zug">ÖPNV</option>
+            <option value="Fahrrad">Fahrrad</option>
+            <option value="Fuß">Zu Fuß</option>
+            <option value="Mitfahrgelegenheit">Mitfahrgelegenheit</option>
+            <option value="Sonstiges">Sonstiges</option>
           </Dropdown>
         </Wrapper>
         <Wrapper>

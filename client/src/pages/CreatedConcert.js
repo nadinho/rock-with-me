@@ -18,7 +18,7 @@ import { ButtonContainer } from "../components/ButtonContainer";
 
 import useGetConcert from "../hooks/useGetConcert";
 
-export default function ConcertRequest() {
+export default function CreateConcert() {
   const { concertId } = useParams();
   const { concert, isLoading, errorMessage } = useGetConcert(concertId);
 
@@ -76,7 +76,7 @@ export default function ConcertRequest() {
           <TextContainer>{concert.detailText}</TextContainer>
         </RowContainer>
         <ButtonContainer>
-          <ButtonFull>Nachricht an Selina</ButtonFull>
+          <ButtonFull>Bearbeiten</ButtonFull>
         </ButtonContainer>
       </ContentContainer>
     </>
