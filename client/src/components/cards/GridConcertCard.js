@@ -7,13 +7,13 @@ import { Title } from "./Title";
 
 export default function GridConcertCard() {
   const addFavorite = () => {
-    alert("Konzert gespeichert");
+    alert("Add to favorites 🎶");
   };
   return (
     <>
       <Grid>
-        <SaveButton onClick={() => addFavorite()}>
-          <SVG
+        <Bookmark onClick={() => addFavorite()}>
+          <svg
             xmlns="http://www.w3.org/2000/svg"
             width="20"
             height="20"
@@ -21,8 +21,8 @@ export default function GridConcertCard() {
             viewBox="0 0 24 24"
           >
             <path d="M12 9.229c.234-1.12 1.547-6.229 5.382-6.229 2.22 0 4.618 1.551 4.618 5.003 0 3.907-3.627 8.47-10 12.629-6.373-4.159-10-8.722-10-12.629 0-3.484 2.369-5.005 4.577-5.005 3.923 0 5.145 5.126 5.423 6.231zm-12-1.226c0 4.068 3.06 9.481 12 14.997 8.94-5.516 12-10.929 12-14.997 0-7.962-9.648-9.028-12-3.737-2.338-5.262-12-4.27-12 3.737z" />
-          </SVG>
-        </SaveButton>
+          </svg>
+        </Bookmark>
 
         <User>
           <ProfilePictures
@@ -46,19 +46,25 @@ export default function GridConcertCard() {
   );
 }
 
-const SaveButton = styled.button`
+const Bookmark = styled.button`
   border: none;
   background: none;
   cursor: pointer;
   grid-column: 3/4;
   grid-row: 1/2;
-`;
 
-const SVG = styled.svg`
-  &:hover {
-    transform: scale(1.1);
+  svg {
+    &:hover {
+      transform: scale(1.1);
+    }
   }
 `;
+
+// const SVG = styled.svg`
+//   &:hover {
+//     transform: scale(1.1);
+//   }
+// `;
 
 const User = styled.div`
   border-right: 1px dashed white;
