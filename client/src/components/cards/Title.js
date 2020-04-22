@@ -1,12 +1,12 @@
 import styled from "@emotion/styled";
 import colors from "../../utils/colors";
 
-export const Title = styled.h3`
+export const Title = styled.h1`
   font-size: ${(props) => titleSize[props.size].size};
   font-weight: 700;
   color: ${colors.primaryText};
   text-transform: uppercase;
-  &::after {
+  /* &::after {
     content: "";
     display: block;
     height: 2px;
@@ -19,7 +19,7 @@ export const Title = styled.h3`
       ${colors.gradientTwo}
     );
     width: 70px;
-  }
+  } */
 `;
 
 const titleSize = {
