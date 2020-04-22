@@ -9,13 +9,13 @@ import Train from "../assets/icons/train.png";
 import GoBackHeader from "../components/header/GoBackHeader";
 
 import { InfoContainer } from "../components/cards/InfoContainer";
-import { ContentContainer } from "../components/cards/ContentContainer";
-import ProfilePictures from "../components/ProfilePictures";
+import { Divider } from "../components/Divider";
 import { RowContainer } from "../components/cards/RowContainer";
 import { Title } from "../components/cards/Title";
 import { ButtonFull } from "../components/buttons/ButtonFull";
 import { ButtonContainer } from "../components/buttons/ButtonContainer";
-
+import { DetailTextContainer } from "../components/cards/DetailTextContainer";
+import UserCard from "../components/User/UserCard";
 import useGetConcert from "../hooks/useGetConcert";
 
 export default function CreateConcert() {
@@ -32,62 +32,47 @@ export default function CreateConcert() {
   return (
     <>
       <GoBackHeader></GoBackHeader>
-      <ContentContainer>
-        <RowContainer>
-          <Title size="big">{concert.artist}</Title>
-        </RowContainer>
+      <Title size="big">{concert.artist}</Title>
 
-        <InfoContainer>
-          <RowContainer>
-            <DetailsItem>
-              <Icon src={Date} />
-              <p>{concert.date}</p>
-            </DetailsItem>
+      <Divider />
 
-            <DetailsItem>
-              <Icon src={Train} />
-              <p>{concert.arrival}</p>
-            </DetailsItem>
-          </RowContainer>
+      <InfoContainer>
+        <DetailsItem>
+          <Icon src={Date} />
+          <p>{concert.date}</p>
+        </DetailsItem>
 
-          <RowContainer>
-            <DetailsItem>
-              <Icon src={Location} />
-              <p>
-                {concert.location}, {concert.city}
-              </p>
-            </DetailsItem>
+        <DetailsItem>
+          <Icon src={Train} />
+          <p>{concert.arrival}</p>
+        </DetailsItem>
 
-            <DetailsItem>
-              <Icon src={Euro} />
-              <p>{concert.price}</p>
-            </DetailsItem>
-          </RowContainer>
-        </InfoContainer>
+        <DetailsItem>
+          <Icon src={Location} />
+          <p>
+            {concert.location}, {concert.city}
+          </p>
+        </DetailsItem>
 
-        <RowContainer>
-          <ProfilePictures
-            size="big"
-            src={
-              "https://images.unsplash.com/photo-1499887142886-791eca5918cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80"
-            }
-            alt="Profil"
-          />
-          <TextContainer>{concert.detailText}</TextContainer>
-        </RowContainer>
-        <ButtonContainer>
-          <ButtonFull>Bearbeiten</ButtonFull>
-        </ButtonContainer>
-      </ContentContainer>
+        <DetailsItem>
+          <Icon src={Euro} />
+          <p>{concert.price}</p>
+        </DetailsItem>
+      </InfoContainer>
+
+      <Divider />
+
+      <RowContainer>
+        <UserCard />
+        <DetailTextContainer>{concert.detailText}</DetailTextContainer>
+      </RowContainer>
+
+      <ButtonContainer>
+        <ButtonFull>Bearbeiten</ButtonFull>
+      </ButtonContainer>
     </>
   );
 }
-
-const TextContainer = styled.div`
-  width: 65%;
-  margin: 20px 30px 0 20px;
-  text-align: justify;
-`;
 
 const Icon = styled.img`
   height: 12px;
