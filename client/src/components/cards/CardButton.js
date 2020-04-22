@@ -12,7 +12,6 @@ export const CardButton = styled.button`
   color: inherit;
   border-radius: 20px;
   font-size: ${(props) => buttonSize[props.size].size};
-  align-self: flex-end;
   margin-top: 12px;
   text-transform: uppercase;
   letter-spacing: 0.1em;

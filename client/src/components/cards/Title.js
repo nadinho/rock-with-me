@@ -6,7 +6,17 @@ export const Title = styled.h1`
   font-weight: 700;
   color: ${colors.primaryText};
   text-transform: uppercase;
-  /* &::after {
+`;
+
+const titleSize = {
+  small: { size: "0.9rem" },
+  big: { size: "1.75rem" },
+};
+
+export default titleSize;
+
+export const TitleUnderline = styled(Title)`
+  &::after {
     content: "";
     display: block;
     height: 2px;
@@ -19,12 +29,5 @@ export const Title = styled.h1`
       ${colors.gradientTwo}
     );
     width: 70px;
-  } */
+  }
 `;
-
-const titleSize = {
-  small: { size: "0.9rem" },
-  big: { size: "1.75rem" },
-};
-
-export default titleSize;

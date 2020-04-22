@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "@emotion/styled";
 
 import PageHeader from "../components/header/PageHeader";
 import { IntroductionHeading } from "../components/textStyling/IntroductionHeading";
@@ -7,8 +6,9 @@ import { IntroductionText } from "../components/textStyling/IntroductionText";
 import { TextContainer } from "../components/textStyling/TextContainer";
 import { ButtonFull } from "../components/buttons/ButtonFull";
 import { ButtonContainer } from "../components/buttons/ButtonContainer";
-
-import { Link } from "react-router-dom";
+import { GridArea } from "../components/cards/GridArea";
+import GridConcertCard from "../components/cards/GridConcertCard";
+import { StyledLink } from "../components/StyledLink";
 
 export default function Concerts() {
   return (
@@ -29,10 +29,16 @@ export default function Concerts() {
           <ButtonFull>Let&apos;s go</ButtonFull>
         </ButtonContainer>
       </StyledLink>
+
+      <GridArea>
+        <GridConcertCard />
+        <GridConcertCard />
+        <GridConcertCard />
+        <GridConcertCard />
+        <GridConcertCard />
+        <GridConcertCard />
+        <GridConcertCard />
+      </GridArea>
     </>
   );
 }
-
-const StyledLink = styled(Link)`
-  text-decoration: none;
-`;
