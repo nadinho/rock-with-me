@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import React from "react";
-import colors from "../utils/colors";
-import Arrow from "../assets/icons/arrow-right.png";
+import colors from "../../utils/colors";
+import Arrow from "../../assets/icons/arrow-right.png";
 
 export default function MessageField() {
   return (

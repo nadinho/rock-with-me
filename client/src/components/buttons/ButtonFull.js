@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import colors from "../utils/colors";
+import colors from "../../utils/colors";
 
 export const ButtonFull = styled.button`
   height: 50px;

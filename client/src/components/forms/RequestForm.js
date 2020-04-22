@@ -2,12 +2,11 @@ import React from "react";
 import styled from "@emotion/styled";
 import PropTypes from "prop-types";
 import FloatingTextArea from "./FloatingTextArea";
-import { Dropdown } from "./Dropdown";
+import ArrivalDropdown from "./ArrivalDropdown";
 import { Form } from "./Form";
 import { Input } from "./Input";
 import { FloatingLabel } from "./FloatingLabel";
-import { ButtonFull } from "./ButtonFull";
-import { postConcert } from "../api/Concerts";
+import { ButtonFull } from "../buttons/ButtonFull";
 
 export default function RequestForm() {
   const [artist, setArtist] = React.useState("");
@@ -17,12 +16,9 @@ export default function RequestForm() {
   const [arrival, setArrival] = React.useState("");
   const [price, setPrice] = React.useState("");
   const [detailText, setDetailText] = React.useState("");
-  // const [isLoading, setIsLoading] = React.useState(false);
 
-  async function handleSubmit(event) {
+  function handleSubmit(event) {
     event.preventDefault();
-
-    // setIsLoading(true);
 
     const concert = {
       artist,
@@ -34,7 +30,7 @@ export default function RequestForm() {
       detailText,
     };
 
-    await postConcert(concert);
+    alert(concert);
   }
 
   // if (isLoading) {
@@ -85,21 +81,13 @@ export default function RequestForm() {
         <FloatingLabel>Stadt</FloatingLabel>
       </Wrapper>
       <Wrapper>
-        <Dropdown
+        <ArrivalDropdown
           required
           value={arrival}
           onChange={(event) => {
             setArrival(event.target.value);
           }}
-        >
-          <option value="">Wie willst du anreisen?</option>
-          <option value="auto">Auto</option>
-          <option value="öpnv">ÖPNV</option>
-          <option value="fahrrad">Fahrrad</option>
-          <option value="fuß">Zu Fuß</option>
-          <option value="mitfahrgelegenheit">Mitfahrgelegenheit</option>
-          <option value="sonstiges">Sonstiges</option>
-        </Dropdown>
+        ></ArrivalDropdown>
       </Wrapper>
       <Wrapper>
         <Input

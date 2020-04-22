@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import colors from "../utils/colors";
-import { appear } from "../utils/animations";
+import colors from "../../utils/colors";
+import { appear } from "../../utils/animations";
 
 export const Input = styled.input`
   animation: ${appear} 1000ms ease-in;

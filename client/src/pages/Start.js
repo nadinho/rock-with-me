@@ -1,7 +1,7 @@
 import React from "react";
-import { ButtonFull } from "../components/ButtonFull";
-import { ButtonOutline } from "../components/ButtonOutline";
-import { ButtonContainer } from "../components/ButtonContainer";
+import { ButtonFull } from "../components/buttons/ButtonFull";
+import { ButtonOutline } from "../components/buttons/ButtonOutline";
+import { ButtonContainer } from "../components/buttons/ButtonContainer";
 import AnimatedLogo from "../components/AnimatedLogo";
 import { TextContainer } from "../components/textStyling/TextContainer";
 import { IntroductionText } from "../components/textStyling/IntroductionText";

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
-import colors from "../utils/colors";
+import colors from "../../utils/colors";
 
 export default function FloatingTextArea(props) {
   return (

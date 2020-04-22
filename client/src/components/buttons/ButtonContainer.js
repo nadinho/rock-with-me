@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { fadeIn } from "../utils/animations";
+import { fadeIn } from "../../utils/animations";
 
 export const ButtonContainer = styled.div`
   display: flex;

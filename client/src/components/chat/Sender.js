@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 import React from "react";
-import colors from "../utils/colors";
+import colors from "../../utils/colors";
 
 export default function Sender() {
   return (

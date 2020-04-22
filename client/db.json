@@ -1,7 +1,7 @@
 {
   "concerts": [
     {
-      "id": "1",
+      "id": 1,
       "artist": "Tocotronic",
       "date": "2020-04-25",
       "location": "FZW",
@@ -11,34 +11,54 @@
       "detailText": "Hi Freaks"
     },
     {
-      "id": "2",
-      "artist": "Tocotronic",
-      "date": "2020-04-25",
-      "location": "FZW",
-      "city": "Dortmund",
-      "arrival": "fahrrad",
-      "price": "45",
-      "detailText": "Hi Freaks"
-    },
-    {
-      "artist": "lijjoiln",
-      "date": "2020-04-26",
-      "location": "nlkn",
-      "city": "mln",
-      "arrival": "mitfahrgelegenheit",
-      "price": "9",
-      "detailText": "jnnl",
-      "id": "iIySaJX"
-    },
-    {
+      "id": 2,
       "artist": "Bloc Party",
       "date": "2020-05-23",
       "location": "Warsteiner Music Hall",
       "city": "Dortmund",
       "arrival": "öpnv",
       "price": "39",
-      "detailText": "Ob Bloc Party wohl wirklich jemals in der Warsteiner Music Hall auftreten werden? ",
-      "id": "aXkohPG"
+      "detailText": "Ob Bloc Party wohl wirklich jemals in der Warsteiner Music Hall auftreten werden? "
+    },
+    {
+      "artist": "David Bowie",
+      "date": "3333-04-01",
+      "location": "Geheim",
+      "city": "Geheim",
+      "arrival": "",
+      "price": "100000000",
+      "detailText": "dd3fwfwe",
+      "id": 3
+    },
+    {
+      "artist": "edew",
+      "date": "2020-04-24",
+      "location": "dwe",
+      "city": "wede",
+      "arrival": "Anfahrt zu Fuß",
+      "price": "22",
+      "detailText": "dedw",
+      "id": 4
+    },
+    {
+      "artist": "dwdw",
+      "date": "2020-04-24",
+      "location": "dedew",
+      "city": "eddwd",
+      "arrival": "Anfahrt zu Fuß",
+      "price": "3333",
+      "detailText": "dwdwdew",
+      "id": 5
+    },
+    {
+      "artist": "Tocotronic",
+      "date": "2020-04-24",
+      "location": "FZW",
+      "city": "Dortmund",
+      "arrival": "Weiß noch nicht",
+      "price": "20",
+      "detailText": "Also, seid dabei! Zusammen werden wir die wunderschöne saronische Inselwelt erkunden, segeln, schwimmen, tauchen, fischen 🐟 , Yoga 🧘‍♀ machen, den neuen Kino-Dokumentarfilm „Blown Away“ im Outdoor-Bootkino schauen 🎬, Sonne tanken☀ , Quatschen und Musik, Musik, Musik🎼 …. Bin mir 110% sicher - Das wird ein tolles Abenteuer! ",
+      "id": 6
     }
   ]
 }
