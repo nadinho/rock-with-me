@@ -17,3 +17,17 @@ export async function getConcert(concertId) {
   const concert = await response.json();
   return concert;
 }
+
+// sort(function(a, b) {
+//   return b.date > a.date;
+// }));
+// })();
+
+export async function getConcerts() {
+  const response = await fetch(`http://localhost:4000/concerts`);
+  if (!response.ok) {
+    throw new Error(response.statusText);
+  }
+  const concerts = await response.json();
+  return concerts;
+}

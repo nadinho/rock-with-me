@@ -1,14 +1,18 @@
 import styled from "@emotion/styled";
 import React from "react";
 import colors from "../../utils/colors";
+import PropTypes from "prop-types";
 
 import ProfilePictures from "../ProfilePictures";
 import { Title } from "./Title";
 
-export default function GridConcertCard() {
+// BOOKMARK FUNCTION - will be displayed
+
+export default function GridConcertCard({ concert }) {
   const addFavorite = () => {
     alert("Add to favorites 🎶");
   };
+
   return (
     <>
       <Grid>
@@ -35,16 +39,20 @@ export default function GridConcertCard() {
         </User>
 
         <TextContainer>
-          <Title size="big">Love A</Title>
-          <br></br>
-          <br></br>
-          <p>25. November 2020</p>
-          <p>Gebäude 9, Köln</p>
+          <Title size="big">{concert.artist}</Title>
+
+          <p>{concert.date}</p>
+          <p>{concert.location}</p>
+          <p>{concert.city}</p>
         </TextContainer>
       </Grid>
     </>
   );
 }
+
+GridConcertCard.propTypes = {
+  concert: PropTypes.array,
+};
 
 const Bookmark = styled.button`
   border: none;
@@ -60,12 +68,6 @@ const Bookmark = styled.button`
   }
 `;
 
-// const SVG = styled.svg`
-//   &:hover {
-//     transform: scale(1.1);
-//   }
-// `;
-
 const User = styled.div`
   border-right: 1px dashed white;
   grid-column: 1/2;
@@ -73,7 +75,8 @@ const User = styled.div`
   padding: 0px 10px;
 `;
 
-const Grid = styled.div`
+const Grid = styled.section`
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 20% 2fr;
@@ -95,4 +98,5 @@ const TextContainer = styled.div`
   grid-column: 2/4;
   grid-row: 2/3;
   padding: 0px 10px;
+  display: grid;
 `;
