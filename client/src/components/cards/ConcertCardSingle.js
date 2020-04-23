@@ -6,7 +6,6 @@ import Euro from "../../assets/icons/euro.png";
 import Train from "../../assets/icons/train.png";
 
 import { InfoContainer } from "./InfoContainer";
-import { ContentContainer } from "./ContentContainer";
 import ProfilePictures from "../ProfilePictures";
 import { RowContainer } from "./RowContainer";
 import { Title } from "./Title";
@@ -15,7 +14,7 @@ import { ButtonContainer } from "../buttons/ButtonContainer";
 
 export default function ConcertCardSingle() {
   return (
-    <ContentContainer>
+    <>
       <RowContainer>
         <Title size="big">Love A</Title>
       </RowContainer>
@@ -65,7 +64,7 @@ export default function ConcertCardSingle() {
       <ButtonContainer>
         <ButtonFull>Nachricht an Selina</ButtonFull>
       </ButtonContainer>
-    </ContentContainer>
+    </>
   );
 }
 
