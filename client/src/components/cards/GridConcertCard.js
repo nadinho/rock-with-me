@@ -76,11 +76,11 @@ const User = styled.div`
 `;
 
 const Grid = styled.section`
-  height: 100%;
+  height: auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
   grid-template-rows: 20% 2fr;
-  padding: 15px 15px;
+  padding: 15px 15px 30px 15px;
 
   background: linear-gradient(
     50deg,
