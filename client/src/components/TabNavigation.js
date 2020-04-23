@@ -8,10 +8,11 @@ export default function TabBar({ links, value, onItemClick }) {
   return (
     <Bar>
       {links.map((link) => (
-        <StyledLink to={`/${link.label}`} key={link.label}>
+        <StyledLink to={`/${link.id}`} key={link.id}>
           <NavItem
             active={value === link.label}
             onClick={() => onItemClick(link.label)}
+            id={link.id}
           >
             <link.Icon active={value === link.label} />
             <Label> {link.label}</Label>
