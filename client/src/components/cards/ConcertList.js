@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { StyledLink } from "../StyledLink";
 
 import GridConcertCard from "./GridConcertCard";
 
@@ -8,7 +9,13 @@ export default function ConcertList({ concerts }) {
   return (
     <>
       {concerts.map((concert) => {
-        return <GridConcertCard key={concert.id} concert={concert} />;
+        return (
+          <>
+            <StyledLink to={`/concerts/${concert.id}`}>
+              <GridConcertCard key={concert.id} concert={concert} />
+            </StyledLink>
+          </>
+        );
       })}
     </>
   );
