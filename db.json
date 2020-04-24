@@ -1,0 +1,54 @@
+{
+  "concerts": [
+    {
+      "id": 1,
+      "artist": "Tocotronic",
+      "date": "2020-04-25",
+      "location": "FZW",
+      "city": "Dortmund",
+      "arrival": "fahrrad",
+      "price": "45",
+      "detailText": "Hi Freaks"
+    },
+    {
+      "id": 2,
+      "artist": "Bloc Party",
+      "date": "2020-05-23",
+      "location": "Warsteiner Music Hall",
+      "city": "Dortmund",
+      "arrival": "öpnv",
+      "price": "39",
+      "detailText": "Ob Bloc Party wohl wirklich jemals in der Warsteiner Music Hall auftreten werden? "
+    },
+    {
+      "artist": "Thees Uhlmann & Band",
+      "date": "2020-07-30",
+      "location": "Würzburger Hafensommer",
+      "city": "Würzburg",
+      "arrival": "",
+      "price": "31.70",
+      "detailText": "Dass es jenseits von Schlager und HipHop deutschsprachige Musik gibt, die bestens funktionieren kann, hat Thees Uhlmann bereits in den 90er Jahren mit seiner Band Tomte bewiesen. Mit „Junkies & Scientologen“ meldet er sich nun zum dritten Mal als Solist eindrucksvoll zu Wort, - und ja, es hat ein wenig gedauert, bis das Meisterwerk endlich fertig wurde.\n\n„Fünf Jahre nicht gesungen“ heißt es demnach auch sehr treffend und dynamisch im Opener des neuen Albums. Langweilig war es dem Nordlicht übrigens nicht, denn immerhin hat er in den Jahren die (lange) Biographie von Bruce Springsteen eingelesen und auch seinen Debüt-Roman „Sophia, der Tod und ich“  in Deutschland, Österreich und der Schweiz vorgestellt. Schon immer war Uhlmann eben ein Tausendsassa, für den es neben der Musik auch noch zahlreiche andere Ausdrucksformen gibt.\n\nMit „Junkies & Scientologen“ lässt Thees Uhlmann nun die spröde Solo-Schlichtheit seiner ersten beiden Alben hinter sich und doch ist es kein opulenter Rock’n’Roll, der sich nun passgenau ins Instagram Gegenlicht stellen würde. Vielmehr wird hier die musikalische Frage aufgeworfen, was eigentlich noch von der kuscheligen Indie-Szene übrig geblieben ist. Das Album schaut allerdings nicht in süßer Melancholie zurück, sondern beschreibt mit viel Feingefühl den Raum im Hier und Jetzt. Fazit: Unbedingt Hörenswert! ",
+      "id": 3
+    },
+    {
+      "artist": "Madsen",
+      "date": "2021-02-21",
+      "location": "Warsteiner Music Hall",
+      "city": "Dortmund",
+      "arrival": "Anfahrt mit Fahrrad",
+      "price": "42.50",
+      "detailText": "Madsen spielten am 4. November 2004 ihr erstes großes Konzert im Berlin Knaack-Klub. Den Traditionsort gibt es schon lange nicht mehr, aber die Wendländer rocken nun inzwischen seit 15 Jahren immer weiter die Bühnen der Republik. \nUnd weil man Feste ja bekanntlich feiern soll, wie sie fallen, schmeißen die Jungs im Spätherbst eine ordentliche Party. Doch alle, die noch keine Tickets für die große Jubiläumsshow am 29. November in der Hamburger Sporthalle haben, können leider nicht mitfeiern. Das Konzert war in kürzester Zeit restlos ausverkauft. Aber Madsen wären nicht die sympathische und erfolgreiche Band, wenn sie sich nicht immer beide Beine für ihre Fans ausgerissen hätten. Daher war für das Quartett schnell klar: „Für alle, die im November in die Röhre schauen, müssen wir nachlegen!“ Gesagt, geplant: Im April und Mai gehen Madsen auf „Die Perfektion“-Tour 2020.\n\nIm Jahr 2004 im beschaulichen Prießeck im Wendland gegründet, wurden die drei Madsen-Brüder Johannes (Gitarre), Sebastian (Gesang, Gitarre, Texte) und Sascha (Schlagzeug) und ihr Freund Niko Maurer (Bass) von den Lokalmatadoren schnell zu einer der erfolgreichsten deutschen Rockbands. Sie haben acht Alben veröffentlicht, von denen es die letzten sieben in die Top 10 der deutschen Charts schafften. Wie viele hundert Shows sie in jener Zeit gespielt haben, hat keiner so genau mitgezählt. Zu beschäftigt waren Madsen damit, die großen Hallen zu füllen und als Dauergast auf sämtlichen deutschen Festivals zu spielen.\n\nMit ihrem beispiellosen Mix aus verzerrten Gitarren, hymnischen Melodien und griffigen deutschen Texten ohne jede Peinlichkeit positioniert die Band sich von Anfang an in einer eigenen Sparte, in der es nur Madsen gibt und in der Madsen einfach alles darf. Dafür werden sie geliebt von ihren Fans, denen Madsen jetzt etwas zurückgeben möchten: „Wir wollen uns mit jeder Show unserer Jubiläumstour bei unseren Fans bedanken, auf die vergangenen 15 Jahre anstoßen und freuen uns echt wahnsinnig darauf, mit ihnen zu feiern.“\nAuch für die Tournee haben Madsen ganz besondere Gäste mit dabei: Nada Surf und The Subways werden bei der Jubiläums-Tour das Vorprogramm übernehmen. ",
+      "id": 4
+    },
+    {
+      "artist": "Foals c/o pop",
+      "date": "2020-04-24",
+      "location": "Palladium",
+      "city": "Köln",
+      "arrival": "Anfahrt mit ÖPNV",
+      "price": "40",
+      "detailText": "Das Oxford-Quintett ist nicht nur einer der vitalsten Live-Acts Großbritanniens, sondern auch der diesjährige Headliner des c/o pop Festivals. Ihr musikalischer Mix aus Pop, Minimal Techno und Math-Rock lässt verschiedene Einflüsse erkennen. Wie facettenreich und einzigartig der Foals-Sound ist, zeigt auch das nunmehr fünfte Studioalbum von Yannis Philippakis (Gesang/Gitarre), Jimmy Smith (Gitarre), Jack Bevan (Schlagzeug) und Edwin Congreave (Keys): \"Everything Not Saved Will Be Lost” ist ein ehrgeiziges zweiteiliges Projekt, das vor Energie geradezu zu sprühen scheint.",
+      "id": 5
+    }
+  ]
+}
