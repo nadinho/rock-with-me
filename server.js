@@ -24,7 +24,7 @@ if (process.env.NODE_ENV === "production") {
 }
 
 initDatabase(process.env.DB_URL, process.env.DB_NAME).then(() => {
-  console.log("Database connected 🎉");
+  console.log("Database is ready 🎉");
 });
 
 app.listen(port, () => {
