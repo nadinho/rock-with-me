@@ -14,7 +14,11 @@ export default function ArrivalDropdown(props) {
   return (
     <Dropdown {...props}>
       {arrivals.map((arrival) => {
-        return <option key={arrival}>{arrival}</option>;
+        return (
+          <option key={arrival} value={arrival}>
+            {arrival}
+          </option>
+        );
       })}
     </Dropdown>
   );

@@ -25,50 +25,36 @@ export default function App() {
       <GlobalStyle />
       <Main>
         <Switch>
-          <Route exact path="/">
-            <Start />
-          </Route>
-          <Route path="/home">
-            <Home />
-          </Route>
-
-          <Route path="/konzerte">
-            <Concerts />
-          </Route>
-
-          <Route path="/newconcert">
-            <NewConcert />
-          </Route>
-
-          <Route path="/concerts/:concertId">
-            <CreatedConcert />
-          </Route>
-
-          <Route path="/messages">
-            <Messages />
-          </Route>
-          <Route path="/profil">
-            <Profile />
-          </Route>
+          <Route exact path="/" component={Start} />
+          <Route path="/home" component={Home} />
+          <Route exact path="/concerts" component={Concerts} />
+          <Route path="/newconcert" component={NewConcert} />
+          <Route path="/concerts/:concertId" component={CreatedConcert} />
+          <Route path="/messages" component={Messages} />
+          <Route path="/profil" component={Profile} />
         </Switch>
       </Main>
       <TabNavigation
         links={[
           {
-            label: "home",
+            label: "Home",
             Icon: HomeIcon,
+            id: "home",
           },
           {
-            label: "konzerte",
+            label: "Konzerte",
             Icon: KonzerteIcon,
+            id: "concerts",
           },
           {
-            label: "messages",
+            label: "Nachrichten",
             Icon: MessagesIcon,
+            id: "messages",
           },
           {
-            label: "profil",
+            label: "Profil",
             Icon: ProfilIcon,
+            id: "profile",
           },
         ]}
         value={activeNavItem}

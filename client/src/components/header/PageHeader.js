@@ -19,7 +19,8 @@ const Header = styled.header`
   justify-content: space-around;
   width: 100%;
   height: 44px;
-  position: fixed;
+  margin-bottom: 20px;
+  /* position: fixed; */
   top: 0;
 `;
 
