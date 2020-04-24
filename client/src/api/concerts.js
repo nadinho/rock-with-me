@@ -1,5 +1,5 @@
 export async function postConcert(concerts) {
-  const response = await fetch("http://localhost:4000/concerts", {
+  const response = await fetch("api/concerts", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -13,15 +13,13 @@ export async function postConcert(concerts) {
 // User should be redirect to created concert
 
 export async function getConcert(concertId) {
-  const response = await fetch(`http://localhost:4000/concerts/${concertId}`);
+  const response = await fetch(`api/concerts/${concertId}`);
   const concert = await response.json();
   return concert;
 }
 
 export async function getConcerts() {
-  const response = await fetch(
-    `http://localhost:4000/concerts?_sort=id&_order=desc`
-  );
+  const response = await fetch(`api/concerts?_sort=id&_order=desc`);
   if (!response.ok) {
     throw new Error(response.statusText);
   }
