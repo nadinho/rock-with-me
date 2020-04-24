@@ -15,7 +15,7 @@ export default function GlobalStyle() {
         body {
           height: 100vh;
           font-size: 0.9rem;
-          margin: 0;
+          margin: 0 0 100px 0;
           font-family: "Montserrat", sans-serif;
           color: ${colors.primaryText};
           background-image: url(${Background});
