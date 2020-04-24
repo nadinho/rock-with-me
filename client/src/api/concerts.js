@@ -18,13 +18,10 @@ export async function getConcert(concertId) {
   return concert;
 }
 
-// sort(function(a, b) {
-//   return b.date > a.date;
-// }));
-// })();
-
 export async function getConcerts() {
-  const response = await fetch(`http://localhost:4000/concerts`);
+  const response = await fetch(
+    `http://localhost:4000/concerts?_sort=id&_order=desc`
+  );
   if (!response.ok) {
     throw new Error(response.statusText);
   }
