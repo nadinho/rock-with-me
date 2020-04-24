@@ -27,7 +27,7 @@ export default function App() {
         <Switch>
           <Route exact path="/" component={Start} />
           <Route path="/home" component={Home} />
-          <Route path="/concerts" component={Concerts} />
+          <Route exact path="/concerts" component={Concerts} />
           <Route path="/newconcert" component={NewConcert} />
           <Route path="/concerts/:concertId" component={CreatedConcert} />
           <Route path="/messages" component={Messages} />
