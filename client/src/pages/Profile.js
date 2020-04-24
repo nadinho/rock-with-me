@@ -164,6 +164,7 @@ const Heading = styled.h3`
 
 const IMG = styled.figure`
   margin: 15px;
+  text-align: center;
 `;
 
 const Button = styled.button`
