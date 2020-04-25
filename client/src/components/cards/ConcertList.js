@@ -11,8 +11,8 @@ export default function ConcertList({ concerts }) {
       {concerts.map((concert) => {
         return (
           <>
-            <StyledLink to={`/concerts/${concert.id}`}>
-              <GridConcertCard key={concert.id} concert={concert} />
+            <StyledLink to={`/concerts/${concert._id}`}>
+              <GridConcertCard key={concert._id} concert={concert} />
             </StyledLink>
           </>
         );
