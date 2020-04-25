@@ -22,10 +22,8 @@ export async function getConcert(concertId) {
 export async function getConcerts() {
   const response = await fetch(`/api/concerts`);
   if (!response.ok) {
-    throw new Error("oh maaan", response.statusText);
+    throw new Error("Oooops", response.statusText);
   }
   const concerts = await response.json();
   return concerts;
 }
-
-//?_sort=id&_order=desc
