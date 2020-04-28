@@ -31,7 +31,7 @@ export default function CreateConcert() {
 
   return (
     <>
-      <GoBackHeader></GoBackHeader>
+      <GoBackHeader to="/concerts"></GoBackHeader>
       <Title size="big">{concert.artist}</Title>
 
       <Divider />

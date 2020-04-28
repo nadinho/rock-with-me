@@ -1,13 +1,16 @@
 import React from "react";
 import styled from "@emotion/styled";
 import BackArrow from "../../assets/icons/back-arrow.png";
+import { Link } from "react-router-dom";
 
 export default function GoBackHeader(props) {
   return (
     <Header>
-      <Button {...props}>
-        <Arrow src={BackArrow} alt="Zurück" />
-      </Button>
+      <Link {...props}>
+        <Button>
+          <Arrow src={BackArrow} alt="Zurück" />
+        </Button>
+      </Link>
     </Header>
   );
 }
