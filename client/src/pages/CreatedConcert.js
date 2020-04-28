@@ -85,7 +85,7 @@ export default function CreateConcert() {
 
       {edit && (
         <>
-          <EditInput
+          <EditTitle
             value={updatedArtist}
             onChange={(event) => {
               setUpdatedArtist(event.target.value);
@@ -231,17 +231,27 @@ const DetailsItem = styled.div`
   justify-content: flex-start;
 `;
 
+const EditTitle = styled.input`
+  font-size: 1.75rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: white;
+  font-family: inherit;
+  background: none;
+  border: none;
+  padding: 5px;
+  text-align: center;
+`;
+
 const EditInput = styled.input`
-  width: 300px;
-  margin: 30px 0 30px 0;
   font-size: 1rem;
   color: white;
   font-family: inherit;
-  padding: 10px;
   background: none;
   border: none;
+  padding: 5px;
+
   &::-webkit-datetime-edit {
-    padding-left: 80px;
     font-size: 0.9rem;
     opacity: 0.8;
   }
@@ -253,7 +263,6 @@ const EditTextarea = styled.textarea`
   font-family: inherit;
   font-size: 1rem;
   padding: 10px;
-  border: none;
   width: 70%;
-  height: 200px;
+  height: 100px;
 `;
