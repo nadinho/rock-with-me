@@ -3,12 +3,14 @@ import styled from "@emotion/styled";
 import colors from "../../utils/colors";
 
 const arrivals = [
+  "Wähle deine Anfahrt",
   "Anfahrt mit Auto",
-  "Anfahrt mit ÖPNV",
+  "Anfahrt mit den Öffis",
   "Anfahrt mit Fahrrad",
-  "Anfahrt zu Fuß",
+  "Zu Fuß",
   "Anfahrt mit Mitfahrgelegenheit",
   "Weiß noch nicht",
+  "Sonstiges",
 ];
 export default function ArrivalDropdown(props) {
   return (
