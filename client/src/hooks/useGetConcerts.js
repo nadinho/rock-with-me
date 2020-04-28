@@ -1,4 +1,3 @@
-// Imported dependencies
 import React from "react";
 import { getConcerts } from "../api/concerts";
 
