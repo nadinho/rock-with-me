@@ -10,6 +10,7 @@ export const Title = styled.h1`
 
 const titleSize = {
   small: { size: "0.9rem" },
+  medium: { size: "1.25" },
   big: { size: "1.75rem" },
 };
 
