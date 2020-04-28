@@ -38,9 +38,8 @@ export default function GridConcertCard({ concert }) {
           <p>Selina</p>
         </User>
 
+        <CardTitle size="medium">{concert.artist}</CardTitle>
         <TextContainer>
-          <Title size="big">{concert.artist}</Title>
-
           <p>{concert.date}</p>
           <p>{concert.location}</p>
           <p>{concert.city}</p>
@@ -54,32 +53,11 @@ GridConcertCard.propTypes = {
   concert: PropTypes.array,
 };
 
-const Bookmark = styled.button`
-  border: none;
-  background: none;
-  cursor: pointer;
-  grid-column: 3/4;
-  grid-row: 1/2;
-
-  svg {
-    &:hover {
-      transform: scale(1.1);
-    }
-  }
-`;
-
-const User = styled.div`
-  border-right: 1px dashed white;
-  grid-column: 1/2;
-  grid-row: 2/3;
-  padding: 0px 10px;
-`;
-
 const Grid = styled.section`
   height: auto;
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  grid-template-rows: 20% 2fr;
+  grid-template-columns: 40% 2fr;
+  grid-template-rows: 10% 1fr;
   padding: 15px 15px 30px 15px;
 
   background: linear-gradient(
@@ -93,10 +71,37 @@ const Grid = styled.section`
   }
 `;
 
-const TextContainer = styled.div`
-  line-height: 3px;
-  grid-column: 2/4;
-  grid-row: 2/3;
+const CardTitle = styled(Title)`
+  grid-column: 1/3;
+  grid-row: 1/3;
+  margin-bottom: 20px;
+`;
+
+const User = styled.div`
+  grid-column: 1/2;
+  grid-row: 3/4;
+
   padding: 0px 10px;
-  display: grid;
+  align-self: center;
+`;
+
+const TextContainer = styled.div`
+  grid-column: 2/4;
+  grid-row: 3/4;
+  padding: 0px 10px;
+  border-left: 1px dashed white;
+`;
+
+const Bookmark = styled.button`
+  border: none;
+  background: none;
+  cursor: pointer;
+  grid-column: 3/4;
+  grid-row: 1/2;
+
+  svg {
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 `;
