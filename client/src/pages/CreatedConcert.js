@@ -25,7 +25,7 @@ import { patchConcert } from "../api/concerts";
 
 export default function CreateConcert() {
   const { concertId } = useParams();
-  const { concert, isLoading, errorMessage } = useGetConcert(concertId);
+  const { concert, isLoading } = useGetConcert(concertId);
   const [edit, setEdit] = React.useState(false);
   const [updatedArtist, setUpdatedArtist] = React.useState("");
   const [updatedDate, setUpdatedDate] = React.useState("");
@@ -34,14 +34,6 @@ export default function CreateConcert() {
   const [updatedCity, setUpdatedCity] = React.useState("");
   const [updatedPrice, setUpdatedPrice] = React.useState("");
   const [updatedDetailText, setUpdatedDetailText] = React.useState("");
-
-  // needs to be outsourced
-  if (errorMessage) {
-    return <div>{errorMessage}</div>;
-  }
-  if (isLoading) {
-    return <div>Is loading...</div>;
-  }
 
   // HANDLE EDIT
   const handleEditClick = (event) => {
@@ -82,144 +74,118 @@ export default function CreateConcert() {
     <>
       <GoBackHeader></GoBackHeader>
 
-      {!edit && (
+      {isLoading && "Loading..."}
+      {!isLoading && (
         <>
-          <Title size="big">{concert.artist}</Title>
-        </>
-      )}
-
-      {edit && (
-        <>
-          <EditTitle
-            value={updatedArtist}
-            onChange={(event) => {
-              setUpdatedArtist(event.target.value);
-            }}
-          />
-        </>
-      )}
-
-      <Divider />
-
-      <InfoContainer>
-        <DetailsItem>
-          <Icon src={Date} />
-          {!edit && (
-            <>
-              <p>{concert.date}</p>
-            </>
-          )}
-          {edit && (
-            <>
-              <EditInput
-                value={updatedDate}
-                type="date"
-                onChange={(event) => {
-                  setUpdatedDate(event.target.value);
-                }}
-              />
-            </>
-          )}
-        </DetailsItem>
-
-        <DetailsItem>
-          <Icon src={Train} />
-          {!edit && (
-            <>
-              <p>{concert.arrival}</p>
-            </>
-          )}
-
-          {edit && (
-            <>
-              <EditArrivalDropdown
-                value={updatedArrival}
-                onChange={(event) => {
-                  setUpdatedArrival(event.target.value);
-                }}
-              />
-            </>
-          )}
-        </DetailsItem>
-
-        <DetailsItem>
-          <Icon src={Location} />
-          {!edit && (
-            <>
-              <p>
-                {concert.location}, {concert.city}
-              </p>
-            </>
-          )}
-          {edit && (
-            <>
-              <EditInput
-                value={updatedLocation}
-                onChange={(event) => {
-                  setUpdatedLocation(event.target.value);
-                }}
-              />
-              <EditInput
-                value={updatedCity}
-                onChange={(event) => {
-                  setUpdatedCity(event.target.value);
-                }}
-              />
-            </>
-          )}
-        </DetailsItem>
-
-        <DetailsItem>
-          <Icon src={Euro} />
-          {!edit && (
-            <>
-              <p>{concert.price}</p>
-            </>
-          )}
-          {edit && (
-            <>
-              <EditInput
-                value={updatedPrice}
-                type="number"
-                onChange={(event) => {
-                  setUpdatedPrice(event.target.value);
-                }}
-              />
-            </>
-          )}
-        </DetailsItem>
-      </InfoContainer>
-
-      <Divider />
-
-      <RowContainer>
-        <UserCard />
-
-        {!edit && (
-          <>
-            <DetailTextContainer>{concert.detailText}</DetailTextContainer>
-          </>
-        )}
-
-        {edit && (
-          <>
-            <EditTextarea
-              value={updatedDetailText}
+          {!edit ? (
+            <Title size="big">{concert.artist}</Title>
+          ) : (
+            <EditTitle
+              value={updatedArtist}
               onChange={(event) => {
-                setUpdatedDetailText(event.target.value);
+                setUpdatedArtist(event.target.value);
               }}
             />
-          </>
-        )}
-      </RowContainer>
+          )}
 
-      <ButtonContainer>
-        {edit ? (
-          <ButtonFull onClick={handleSaveClick}>Speichern</ButtonFull>
-        ) : (
-          <ButtonFull onClick={handleEditClick}>Bearbeiten</ButtonFull>
-        )}
-      </ButtonContainer>
+          <Divider />
+
+          <InfoContainer>
+            <DetailsItem>
+              <Icon src={Date} />
+              {!edit ? (
+                <p>{concert.date}</p>
+              ) : (
+                <EditInput
+                  value={updatedDate}
+                  type="date"
+                  onChange={(event) => {
+                    setUpdatedDate(event.target.value);
+                  }}
+                />
+              )}
+            </DetailsItem>
+
+            <DetailsItem>
+              <Icon src={Train} />
+              {!edit ? (
+                <p>{concert.arrival}</p>
+              ) : (
+                <EditArrivalDropdown
+                  value={updatedArrival}
+                  onChange={(event) => {
+                    setUpdatedArrival(event.target.value);
+                  }}
+                />
+              )}
+            </DetailsItem>
+
+            <DetailsItem>
+              <Icon src={Location} />
+              {!edit ? (
+                <p>
+                  {concert.location}, {concert.city}
+                </p>
+              ) : (
+                <>
+                  <EditInput
+                    value={updatedLocation}
+                    onChange={(event) => {
+                      setUpdatedLocation(event.target.value);
+                    }}
+                  />
+                  <EditInput
+                    value={updatedCity}
+                    onChange={(event) => {
+                      setUpdatedCity(event.target.value);
+                    }}
+                  />
+                </>
+              )}
+            </DetailsItem>
+
+            <DetailsItem>
+              <Icon src={Euro} />
+              {!edit ? (
+                <p>{concert.price}</p>
+              ) : (
+                <EditInput
+                  value={updatedPrice}
+                  type="number"
+                  onChange={(event) => {
+                    setUpdatedPrice(event.target.value);
+                  }}
+                />
+              )}
+            </DetailsItem>
+          </InfoContainer>
+
+          <Divider />
+
+          <RowContainer>
+            <UserCard />
+
+            {!edit ? (
+              <DetailTextContainer>{concert.detailText}</DetailTextContainer>
+            ) : (
+              <EditTextarea
+                value={updatedDetailText}
+                onChange={(event) => {
+                  setUpdatedDetailText(event.target.value);
+                }}
+              />
+            )}
+          </RowContainer>
+
+          <ButtonContainer>
+            {edit ? (
+              <ButtonFull onClick={handleSaveClick}>Speichern</ButtonFull>
+            ) : (
+              <ButtonFull onClick={handleEditClick}>Bearbeiten</ButtonFull>
+            )}
+          </ButtonContainer>
+        </>
+      )}
     </>
   );
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { getConcerts } from "../api/concerts";
 
-export default function useGetArticles() {
+export default function useGetConcerts() {
   const [concerts, setConcerts] = React.useState(false);
 
   React.useEffect(() => {
