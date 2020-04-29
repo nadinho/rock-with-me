@@ -28,13 +28,13 @@ export async function getConcerts() {
   return concerts;
 }
 
-export function patchConcert(concertId, updatedConcert) {
+export function patchConcert(concertId, updates) {
   fetch(`/api/concerts/${concertId}`, {
     method: "PATCH",
     headers: {
       Accept: "application/json",
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(updatedConcert),
+    body: JSON.stringify(updates),
   });
 }
