@@ -21,6 +21,7 @@ import { EditInput } from "../components/forms/EditInput";
 import EditArrivalDropdown from "../components/forms/EditArrivalDropdown";
 import { EditTextarea } from "../components/forms/EditTextarea";
 import useGetConcert from "../hooks/useGetConcert";
+import { patchConcert } from "../api/concerts";
 
 export default function CreateConcert() {
   const { concertId } = useParams();
@@ -72,14 +73,7 @@ export default function CreateConcert() {
       detailText: updatedDetailText,
     };
 
-    fetch(`/api/concerts/${concertId}`, {
-      method: "PATCH",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(updatedConcert),
-    });
+    patchConcert(concertId, updatedConcert);
 
     setEdit(false);
   };
