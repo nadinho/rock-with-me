@@ -42,9 +42,16 @@ export default function CreateConcert() {
   const handleEditClick = (event) => {
     event.preventDefault();
 
+    //
     setUpdatedArtist(concert.artist);
+    setUpdatedDate(concert.date);
+    setUpdatedArrival(concert.arrival);
+    setUpdatedLocation(concert.location);
+    setUpdatedCity(concert.city);
+    setUpdatedPrice(concert.price);
     setUpdatedDetailText(concert.detailText);
 
+    //
     setEdit(true);
   };
 
