@@ -16,6 +16,10 @@ import { ButtonFull } from "../components/buttons/ButtonFull";
 import { ButtonContainer } from "../components/buttons/ButtonContainer";
 import { DetailTextContainer } from "../components/cards/DetailTextContainer";
 import UserCard from "../components/User/UserCard";
+import { EditTitle } from "../components/forms/EditTitle";
+import { EditInput } from "../components/forms/EditInput";
+import EditArrivalDropdown from "../components/forms/EditArrivalDropdown";
+import { EditTextarea } from "../components/forms/EditTextarea";
 import useGetConcert from "../hooks/useGetConcert";
 
 export default function CreateConcert() {
@@ -134,7 +138,7 @@ export default function CreateConcert() {
 
           {edit && (
             <>
-              <EditInput
+              <EditArrivalDropdown
                 value={updatedArrival}
                 onChange={(event) => {
                   setUpdatedArrival(event.target.value);
@@ -236,40 +240,4 @@ const DetailsItem = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-start;
-`;
-
-const EditTitle = styled.input`
-  font-size: 1.75rem;
-  text-transform: uppercase;
-  font-weight: 700;
-  color: white;
-  font-family: inherit;
-  background: none;
-  border: none;
-  padding: 5px;
-  text-align: center;
-`;
-
-const EditInput = styled.input`
-  font-size: 1rem;
-  color: white;
-  font-family: inherit;
-  background: none;
-  border: none;
-  padding: 5px;
-
-  &::-webkit-datetime-edit {
-    font-size: 0.9rem;
-    opacity: 0.8;
-  }
-`;
-
-const EditTextarea = styled.textarea`
-  background: none;
-  color: inherit;
-  font-family: inherit;
-  font-size: 1rem;
-  padding: 10px;
-  width: 70%;
-  height: 100px;
 `;
