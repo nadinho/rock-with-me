@@ -31,7 +31,7 @@ export default function App() {
           <Route path="/newconcert" component={NewConcert} />
           <Route path="/concerts/:concertId" component={CreatedConcert} />
           <Route path="/messages" component={Messages} />
-          <Route path="/profil" component={Profile} />
+          <Route path="/profile" component={Profile} />
         </Switch>
       </Main>
       <TabNavigation
