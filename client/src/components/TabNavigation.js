@@ -35,7 +35,7 @@ const Bar = styled.div`
   justify-content: space-around;
   background: ${colors.background};
   width: 100%;
-  position: sticky;
+  position: fixed;
   bottom: 0;
 `;
 
