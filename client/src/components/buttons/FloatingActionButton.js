@@ -26,7 +26,7 @@ export default function FloatingActionButton() {
 const Button = styled.button`
   position: fixed;
   cursor: pointer;
-  bottom: 80px;
+  bottom: 70px;
   right: 20px;
   z-index: 100;
   background-color: yellow;
