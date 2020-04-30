@@ -67,6 +67,12 @@ export default function CreateConcert() {
 
     patchConcert(concertId, updatedConcert);
 
+    function refreshPage() {
+      window.location.reload(false);
+    }
+
+    refreshPage();
+
     setEdit(false);
   };
 
