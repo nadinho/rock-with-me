@@ -8,7 +8,7 @@ import { Title } from "./Title";
 
 // BOOKMARK FUNCTION - will be displayed
 
-export default function GridConcertCard({ concert }) {
+export default function ConcertCard({ concert }) {
   const addFavorite = () => {
     alert("Add to favorites 🎶");
   };
@@ -35,7 +35,7 @@ export default function GridConcertCard({ concert }) {
               "https://images.unsplash.com/photo-1499887142886-791eca5918cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80"
             }
           />
-          <p>Selina</p>
+          <p>Alice</p>
         </User>
 
         <CardTitle size="medium">{concert.artist}</CardTitle>
@@ -49,7 +49,7 @@ export default function GridConcertCard({ concert }) {
   );
 }
 
-GridConcertCard.propTypes = {
+ConcertCard.propTypes = {
   concert: PropTypes.array,
 };
 
@@ -58,7 +58,8 @@ const Grid = styled.section`
   display: grid;
   grid-template-columns: 40% 2fr;
   grid-template-rows: 10% 1fr;
-  padding: 15px 15px 30px 15px;
+  /* padding: 15px 15px 30px 15px; */
+  padding: 5px 5px 15px 5px;
 
   background: linear-gradient(
     50deg,
@@ -75,6 +76,7 @@ const CardTitle = styled(Title)`
   grid-column: 1/3;
   grid-row: 1/3;
   margin-bottom: 20px;
+  letter-spacing: 1.8px;
 `;
 
 const User = styled.div`
