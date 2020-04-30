@@ -70,4 +70,5 @@ const Main = styled.main`
   justify-content: center;
   text-align: center;
   align-items: center;
+  margin-bottom: 100px;
 `;
