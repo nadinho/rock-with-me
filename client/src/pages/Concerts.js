@@ -9,7 +9,7 @@ import { ButtonContainer } from "../components/buttons/ButtonContainer";
 import { GridArea } from "../components/cards/GridArea";
 import { StyledLink } from "../components/StyledLink";
 import useGetConcerts from "../hooks/useGetConcerts";
-import ConcertList from "../components/cards/ConcertList";
+import { ConcertList } from "../components/cards/ConcertList";
 
 export default function Concerts() {
   const concerts = useGetConcerts();

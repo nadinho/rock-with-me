@@ -1,6 +1,6 @@
 import React from "react";
 import ConcertCardSmall from "../components/cards/ConcertCardSmall";
-import ConcertCardBig from "../components/cards/ConcertCardBig";
+import ConcertCard from "../components/cards/ConcertCard";
 import ConcertCardSingle from "../components/cards/ConcertCardSingle";
 
 export default {
@@ -8,5 +8,5 @@ export default {
 };
 
 export const small = () => <ConcertCardSmall />;
-export const big = () => <ConcertCardBig />;
+export const big = () => <ConcertCard />;
 export const single = () => <ConcertCardSingle />;
