@@ -78,7 +78,7 @@ export default function CreateConcert() {
 
   return (
     <>
-      <GoBackHeader></GoBackHeader>
+      <GoBackHeader to="/concerts"></GoBackHeader>
 
       {isLoading && "Loading..."}
       {!isLoading && (
