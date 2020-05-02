@@ -30,7 +30,7 @@ const Header = styled.header`
   justify-content: flex-start;
   width: 100%;
   height: 44px;
-  /* margin-bottom: 20px; */
+  margin-bottom: 20px;
   padding: 10px 20px 10px 20px;
   top: 0;
 `;
