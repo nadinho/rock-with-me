@@ -19,7 +19,7 @@ import {
 } from "./assets/icons/Icons";
 
 export default function App() {
-  const [activeNavItem, setActiveNavItem] = React.useState("");
+  const [activeNavItem, setActiveNavItem] = React.useState("Home");
 
   return (
     <Router>
