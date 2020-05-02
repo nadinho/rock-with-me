@@ -10,4 +10,5 @@ export const EditTitle = styled.input`
   border: none;
   padding: 5px;
   text-align: center;
+  margin: 14px 0 14px 0;
 `;

@@ -15,20 +15,3 @@ const titleSize = {
 };
 
 export default titleSize;
-
-export const TitleUnderline = styled(Title)`
-  &::after {
-    content: "";
-    display: block;
-    height: 2px;
-    position: relative;
-    top: 4px;
-    left: 22px;
-    background: linear-gradient(
-      50deg,
-      ${colors.gradientOne},
-      ${colors.gradientTwo}
-    );
-    width: 70px;
-  }
-`;
