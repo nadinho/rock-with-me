@@ -20,12 +20,44 @@ import {
 
 export default function App() {
   const [activeNavItem, setActiveNavItem] = React.useState("Home");
+
   return (
     <Router>
       <GlobalStyle />
       <Main>
+        <Route exact path="/" component={Start} />
+        <Route
+          path="/(.+)"
+          render={() => (
+            <TabNavigation
+              links={[
+                {
+                  label: "Home",
+                  Icon: HomeIcon,
+                  id: "home",
+                },
+                {
+                  label: "Konzerte",
+                  Icon: KonzerteIcon,
+                  id: "concerts",
+                },
+                {
+                  label: "Nachrichten",
+                  Icon: MessagesIcon,
+                  id: "messages",
+                },
+                {
+                  label: "Profil",
+                  Icon: ProfilIcon,
+                  id: "profile",
+                },
+              ]}
+              value={activeNavItem}
+              onItemClick={(item) => setActiveNavItem(item)}
+            />
+          )}
+        />
         <Switch>
-          <Route exact path="/" component={Start} />
           <Route path="/home" component={Home} />
           <Route exact path="/concerts" component={Concerts} />
           <Route path="/newconcert" component={NewConcert} />
@@ -34,32 +66,6 @@ export default function App() {
           <Route path="/profile" component={Profile} />
         </Switch>
       </Main>
-      <TabNavigation
-        links={[
-          {
-            label: "Home",
-            Icon: HomeIcon,
-            id: "home",
-          },
-          {
-            label: "Konzerte",
-            Icon: KonzerteIcon,
-            id: "concerts",
-          },
-          {
-            label: "Nachrichten",
-            Icon: MessagesIcon,
-            id: "messages",
-          },
-          {
-            label: "Profil",
-            Icon: ProfilIcon,
-            id: "profile",
-          },
-        ]}
-        value={activeNavItem}
-        onItemClick={(item) => setActiveNavItem(item)}
-      />
     </Router>
   );
 }
