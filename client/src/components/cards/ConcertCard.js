@@ -3,6 +3,8 @@ import React from "react";
 import colors from "../../utils/colors";
 import PropTypes from "prop-types";
 
+import { zoomIn } from "../../utils/animations";
+
 import ProfilePictures from "../ProfilePictures";
 import { Title } from "./Title";
 
@@ -67,6 +69,7 @@ const Grid = styled.section`
     ${colors.gradientTwo}
   );
   cursor: pointer;
+  animation: ${zoomIn} 1000ms ease-in;
   &:hover {
     transform: scale(1.1);
   }

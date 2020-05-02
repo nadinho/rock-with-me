@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import PropTypes from "prop-types";
+import { zoomIn } from "../utils/animations";
 
 export default function HomeDivider({ title, link }) {
   return (
@@ -37,6 +38,7 @@ const Container = styled.div`
   grid-template-rows: 10px 1fr;
   padding: 15px 15px 30px 15px;
   width: 100%;
+  animation: ${zoomIn} ease-in 1000ms;
 `;
 
 const LinkText = styled.p`

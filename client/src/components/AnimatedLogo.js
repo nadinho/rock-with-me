@@ -19,7 +19,7 @@ const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  animation: ${fadeInUp} ease-in 1500ms;
+  animation: ${fadeInUp} ease-in 1000ms;
 `;
 
 const Logo = styled.h1`

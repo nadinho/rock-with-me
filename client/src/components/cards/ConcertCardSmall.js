@@ -2,6 +2,7 @@ import styled from "@emotion/styled";
 import React from "react";
 import colors from "../../utils/colors";
 import PropTypes from "prop-types";
+import { zoomIn } from "../../utils/animations";
 
 export default function ConcertCardSmall({ concert }) {
   return (
@@ -41,6 +42,8 @@ const Container = styled.div`
   &:hover {
     transform: scale(1.1);
   }
+  animation: ${zoomIn} ease-in 1000ms;
+
 `;
 
 const CardTitle = styled.h1`
