@@ -37,6 +37,7 @@ const Bar = styled.div`
   width: 100%;
   position: fixed;
   bottom: 0;
+  z-index: 1000;
 `;
 
 const NavItem = styled.button`
