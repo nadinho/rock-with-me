@@ -9,5 +9,4 @@ export const EditTextarea = styled.textarea`
   padding: 10px;
   width: 70%;
   height: 20%;
-  // autogrow?
 `;

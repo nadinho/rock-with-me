@@ -35,11 +35,9 @@ export default function CreateConcert() {
   const [updatedPrice, setUpdatedPrice] = React.useState("");
   const [updatedDetailText, setUpdatedDetailText] = React.useState("");
 
-  // HANDLE EDIT
   const handleEditClick = (event) => {
     event.preventDefault();
 
-    //
     setUpdatedArtist(concert.artist);
     setUpdatedDate(concert.date);
     setUpdatedArrival(concert.arrival);
@@ -48,11 +46,8 @@ export default function CreateConcert() {
     setUpdatedPrice(concert.price);
     setUpdatedDetailText(concert.detailText);
 
-    //
     setEdit(true);
   };
-
-  // SAVE EDIT
 
   const handleSaveClick = () => {
     const updatedConcert = {
@@ -66,13 +61,7 @@ export default function CreateConcert() {
     };
 
     patchConcert(concertId, updatedConcert);
-
-    function refreshPage() {
-      window.location.reload(false);
-    }
-
-    refreshPage();
-
+    window.location.reload(false);
     setEdit(false);
   };
 

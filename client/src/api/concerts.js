@@ -11,8 +11,6 @@ export async function postConcert(concerts) {
   return createdConcert;
 }
 
-// User should be redirect to created concert
-
 export async function getConcert(concertId) {
   const response = await fetch(`/api/concerts/${concertId}`);
   const concert = await response.json();
