@@ -1,4 +1,6 @@
 import React from "react";
+import { Redirect } from "react-router-dom";
+
 import { ButtonFull } from "../components/buttons/ButtonFull";
 import { ButtonOutline } from "../components/buttons/ButtonOutline";
 import { ButtonContainer } from "../components/buttons/ButtonContainer";
@@ -8,8 +10,15 @@ import { IntroductionText } from "../components/textStyling/IntroductionText";
 import { IntroductionHeading } from "../components/textStyling/IntroductionHeading";
 
 export default function Start() {
+  const [redirect, setRedirect] = React.useState(false);
+
+  function redirectToHome() {
+    setTimeout(() => setRedirect(true), 4000);
+  }
+  redirectToHome();
   return (
     <>
+      {redirect ? <Redirect to="/home" /> : true}
       <AnimatedLogo />
       <TextContainer>
         <IntroductionHeading>
