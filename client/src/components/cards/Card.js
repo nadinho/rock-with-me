@@ -12,5 +12,3 @@ const cardSize = {
   small: { width: "35%" },
   big: { width: "90%" },
 };
-
-export default cardSize;

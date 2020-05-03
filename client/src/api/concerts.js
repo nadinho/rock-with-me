@@ -1,17 +1,15 @@
-export async function postConcert(concerts) {
+export async function postConcert(concert) {
   const response = await fetch("/api/concerts", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(concerts),
+    body: JSON.stringify(concert),
     Encrypt: "true",
   });
   const createdConcert = await response.json();
   return createdConcert;
 }
-
-// User should be redirect to created concert
 
 export async function getConcert(concertId) {
   const response = await fetch(`/api/concerts/${concertId}`);
@@ -22,7 +20,11 @@ export async function getConcert(concertId) {
 export async function getConcerts() {
   const response = await fetch(`/api/concerts`);
   if (!response.ok) {
-    throw new Error("Oooops", response.statusText);
+    throw new Error(
+      "Oh snap! 🤬",
+      response.statusText,
+      "Pls refresh the page 🙃"
+    );
   }
   const concerts = await response.json();
   return concerts;

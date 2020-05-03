@@ -37,13 +37,11 @@ const Container = styled.div`
     ${colors.gradientOne},
     ${colors.gradientTwo}
   );
-  /* background: ${colors.gradientOne}; */
   cursor: pointer;
   &:hover {
     transform: scale(1.1);
   }
   animation: ${zoomIn} ease-in 1000ms;
-
 `;
 
 const CardTitle = styled.h1`
