@@ -12,5 +12,5 @@ export const Divider = styled.div`
     ${colors.gradientOne},
     ${colors.gradientTwo}
   );
-  animation: ${zoomIn} ease-in 1500ms;
+  animation: ${zoomIn} ease-in 1000ms;
 `;

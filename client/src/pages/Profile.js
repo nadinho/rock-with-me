@@ -8,6 +8,7 @@ import { ButtonContainer } from "../components/buttons/ButtonContainer";
 import { ButtonFull } from "../components/buttons/ButtonFull";
 import { ButtonOutline } from "../components/buttons/ButtonOutline";
 import { Divider } from "../components/Divider";
+import { zoomIn } from "../utils/animations";
 
 export default function Profile() {
   return (
@@ -139,6 +140,7 @@ const UserHead = styled.div`
   align-items: center;
   margin: 70px 0 70px 0;
   justify-content: space-between;
+  animation: ${zoomIn} 1000ms ease-in;
 `;
 
 const Row = styled.div`
@@ -146,6 +148,7 @@ const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-top: -10px;
+  animation: ${zoomIn} 1000ms ease-in;
 `;
 
 const Genre = styled.p`

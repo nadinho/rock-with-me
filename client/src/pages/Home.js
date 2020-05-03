@@ -13,6 +13,7 @@ import {
   Leoniden,
   LoveA,
 } from "../components/cards/ExampleFav";
+import { zoomIn } from "../utils/animations";
 
 import useGetConcerts from "../hooks/useGetConcerts";
 
@@ -75,4 +76,5 @@ const Slider = styled.div`
 
 const NewUser = styled(Link)`
   margin: 5px;
+  animation: ${zoomIn} ease-in 1000ms;
 `;

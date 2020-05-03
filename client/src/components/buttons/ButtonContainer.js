@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { fadeIn } from "../../utils/animations";
+import { zoomIn } from "../../utils/animations";
 
 export const ButtonContainer = styled.div`
   display: flex;
@@ -7,5 +7,5 @@ export const ButtonContainer = styled.div`
   align-items: center;
   margin-top: 20px;
   animation-delay: 200ms;
-  animation: ${fadeIn} 1500ms ease-in;
+  animation: ${zoomIn} 1000ms ease-in;
 `;
