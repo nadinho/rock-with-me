@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import colors from "../../utils/colors";
+import { zoomIn } from "../../utils/animations";
 
 export default function FloatingTextArea(props) {
   return (
@@ -13,6 +14,7 @@ export default function FloatingTextArea(props) {
 
 const Wrapper = styled.div`
   position: relative;
+  animation: ${zoomIn} 1000ms ease-in;
 `;
 
 const TextArea = styled.textarea`

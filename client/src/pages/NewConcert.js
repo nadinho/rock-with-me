@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "@emotion/styled";
 import { useHistory } from "react-router-dom";
 
 import GoBackHeader from "../components/header/GoBackHeader";
@@ -13,6 +12,8 @@ import { Input } from "../components/forms/Input";
 import { FloatingLabel } from "../components/forms/FloatingLabel";
 import { ButtonFull } from "../components/buttons/ButtonFull";
 import { postConcert } from "../api/concerts";
+import { Wrapper } from "../components/forms/Wrapper";
+import { ButtonContainer } from "../components/buttons/ButtonContainer";
 
 export default function NewConcert() {
   const history = useHistory();
@@ -123,12 +124,10 @@ export default function NewConcert() {
           Platz für Details
         </FloatingTextArea>
 
-        <ButtonFull>Absenden</ButtonFull>
+        <ButtonContainer>
+          <ButtonFull>Absenden</ButtonFull>
+        </ButtonContainer>
       </Form>
     </>
   );
 }
-
-const Wrapper = styled.div`
-  position: relative;
-`;

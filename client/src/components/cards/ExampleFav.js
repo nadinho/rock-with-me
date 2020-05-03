@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import React from "react";
 import colors from "../../utils/colors";
+import { zoomIn } from "../../utils/animations";
 
 export function Foals() {
   return (
@@ -76,6 +77,7 @@ const Grid = styled.div`
     ${colors.gradientTwo}
   );
   cursor: pointer;
+  animation: ${zoomIn} ease-in 1000ms;
   &:hover {
     transform: scale(1.1);
   }
