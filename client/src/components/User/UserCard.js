@@ -2,6 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import { CardButton } from "../cards/CardButton";
 import ProfilePictures from "../ProfilePictures";
+import { zoomIn } from "../../utils/animations";
 
 function UserCard() {
   return (
@@ -30,9 +31,9 @@ const Card = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 6%;
-  /* flex-basis: 0%; */
   padding: 20px;
   font-size: 0.8rem;
+  animation: ${zoomIn} 1000ms ease-in;
 `;
 
 const Name = styled.h1`

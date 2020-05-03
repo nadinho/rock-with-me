@@ -8,8 +8,4 @@ export const EditInput = styled.input`
   font-size: inherit;
   border: none;
   padding: 5px;
-
-  &::-webkit-datetime-edit {
-    font-size: 0.9rem;
-  }
 `;
