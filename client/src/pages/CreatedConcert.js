@@ -14,7 +14,7 @@ import { RowContainer } from "../components/cards/RowContainer";
 import { Title } from "../components/cards/Title";
 import { ButtonFull } from "../components/buttons/ButtonFull";
 import { ButtonContainer } from "../components/buttons/ButtonContainer";
-import { DetailTextContainer } from "../components/cards/DetailTextContainer";
+import { DetailTextContainer } from "../components/forms/DetailTextContainer";
 import UserCard from "../components/User/UserCard";
 import { EditTitle } from "../components/forms/EditTitle";
 import { EditInput } from "../components/forms/EditInput";
@@ -176,6 +176,7 @@ export default function CreateConcert() {
               <DetailTextContainer>{concert.detailText}</DetailTextContainer>
             ) : (
               <EditTextarea
+                defaultValue={"this\nis\na\nlong\ninitial\ntext"}
                 value={updatedDetailText}
                 onChange={(event) => {
                   setUpdatedDetailText(event.target.value);
@@ -208,4 +209,8 @@ const DetailsItem = styled.div`
   align-items: center;
   justify-content: flex-start;
   flex: 2 1 auto;
+  p {
+    margin-left: 5px;
+    font-size: 0.9rem;
+  }
 `;
