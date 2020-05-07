@@ -2,6 +2,7 @@ import React from "react";
 import styled from "@emotion/styled";
 import colors from "../utils/colors";
 
+import PageHeader from "../components/header/PageHeader";
 import ProfilePictures from "../components/ProfilePictures";
 import { FavContainer } from "../components/User/FavContainer";
 import { ButtonContainer } from "../components/buttons/ButtonContainer";
@@ -13,6 +14,7 @@ import { zoomIn } from "../utils/animations";
 export default function Profile() {
   return (
     <>
+      <PageHeader>Profil</PageHeader>
       <UserHead>
         <ProfilePictures
           size="extraBig"
