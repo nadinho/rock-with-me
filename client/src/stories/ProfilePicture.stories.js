@@ -1,22 +1,22 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
-import ProfilePictures from "../components/ProfilePictures";
+import ProfilePicture from "../components/user/ProfilePicture";
 
-storiesOf("ProfilePictures", module)
+storiesOf("ProfilePicture", module)
   .add("small", () => (
-    <ProfilePictures
+    <ProfilePicture
       src="https://randomuser.me/api/portraits/women/57.jpg"
       size="small"
     />
   ))
   .add("medium", () => (
-    <ProfilePictures
+    <ProfilePicture
       src="https://randomuser.me/api/portraits/women/57.jpg"
       size="medium"
     />
   ))
   .add("big", () => (
-    <ProfilePictures
+    <ProfilePicture
       src="https://randomuser.me/api/portraits/women/57.jpg"
       size="big"
     />

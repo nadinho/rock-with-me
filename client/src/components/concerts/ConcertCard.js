@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 
 import { zoomIn } from "../../utils/animations";
 
-import ProfilePictures from "../ProfilePictures";
+import ProfilePicture from "../user/ProfilePicture";
 import { Title } from "./Title";
 
 // BOOKMARK FUNCTION - will be displayed
@@ -31,10 +31,7 @@ export default function ConcertCard({ concert }) {
         </Bookmark>
 
         <User>
-          <ProfilePictures
-            size="big"
-            src={"https://i.pravatar.cc/150?img=30"}
-          />
+          <ProfilePicture size="big" src={"https://i.pravatar.cc/150?img=30"} />
           <p>Anna</p>
         </User>
 

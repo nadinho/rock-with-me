@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import PropTypes from "prop-types";
-import { zoomIn } from "../utils/animations";
+import { zoomIn } from "../../utils/animations";
 
 export default function HomeDivider({ title, link }) {
   return (

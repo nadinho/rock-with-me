@@ -6,10 +6,10 @@ import { IntroductionText } from "../components/textStyling/IntroductionText";
 import { TextContainer } from "../components/textStyling/TextContainer";
 import { ButtonFull } from "../components/buttons/ButtonFull";
 import { ButtonContainer } from "../components/buttons/ButtonContainer";
-import { GridArea } from "../components/cards/GridArea";
+import { GridArea } from "../components/concerts/GridArea";
 import { StyledLink } from "../components/StyledLink";
 import useGetConcerts from "../hooks/useGetConcerts";
-import { ConcertList } from "../components/cards/ConcertList";
+import { ConcertList } from "../components/concerts/ConcertList";
 
 export default function Concerts() {
   const concerts = useGetConcerts();

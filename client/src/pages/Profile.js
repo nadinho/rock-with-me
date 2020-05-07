@@ -3,12 +3,12 @@ import styled from "@emotion/styled";
 import colors from "../utils/colors";
 
 import PageHeader from "../components/header/PageHeader";
-import ProfilePictures from "../components/ProfilePictures";
-import { FavContainer } from "../components/User/FavContainer";
+import ProfilePicture from "../components/user/ProfilePicture";
+import { FavContainer } from "../components/user/FavContainer";
 import { ButtonContainer } from "../components/buttons/ButtonContainer";
 import { ButtonFull } from "../components/buttons/ButtonFull";
 import { ButtonOutline } from "../components/buttons/ButtonOutline";
-import { Divider } from "../components/Divider";
+import { Divider } from "../components/divider/Divider";
 import { zoomIn } from "../utils/animations";
 
 export default function Profile() {
@@ -16,7 +16,7 @@ export default function Profile() {
     <>
       <PageHeader>Profil</PageHeader>
       <UserHead>
-        <ProfilePictures
+        <ProfilePicture
           size="extraBig"
           src="https://i.pravatar.cc/150?img=30"
         />
@@ -48,21 +48,21 @@ export default function Profile() {
 
         <Row>
           <IMG>
-            <ProfilePictures
+            <ProfilePicture
               size="medium"
               src="https://guitar.com/wp-content/uploads/2019/09/foals-band-1@1400x1050.jpg"
             />
             <figcaption>Foals</figcaption>
           </IMG>
           <IMG>
-            <ProfilePictures
+            <ProfilePicture
               size="medium"
               src="https://www.laut.de/The-Cure/the-cure-166130.jpg"
             />
             <figcaption>The Cure</figcaption>
           </IMG>
           <IMG>
-            <ProfilePictures
+            <ProfilePicture
               size="medium"
               src="https://www.laut.de/Joy-Division/joy-division-167444.jpg"
             />
@@ -88,35 +88,35 @@ export default function Profile() {
         <Heading>Buddies</Heading>
         <Row>
           <IMG>
-            <ProfilePictures
+            <ProfilePicture
               size="medium"
               src="https://i.pravatar.cc/150?img=56"
             />
             <figcaption>Daniel</figcaption>
           </IMG>
           <IMG>
-            <ProfilePictures
+            <ProfilePicture
               size="medium"
               src="https://i.pravatar.cc/150?img=41"
             />
             <figcaption>Luisa</figcaption>
           </IMG>
           <IMG>
-            <ProfilePictures
+            <ProfilePicture
               size="medium"
               src="https://i.pravatar.cc/150?img=58"
             />
             <figcaption>Jörn</figcaption>
           </IMG>
           <IMG>
-            <ProfilePictures
+            <ProfilePicture
               size="medium"
               src="https://i.pravatar.cc/150?img=10"
             />
             <figcaption>Lea</figcaption>
           </IMG>
           <IMG>
-            <ProfilePictures
+            <ProfilePicture
               size="medium"
               src="https://i.pravatar.cc/150?img=16"
             />

@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import React from "react";
-import colors from "../../utils/colors";
-import { zoomIn } from "../../utils/animations";
+import colors from "../../../utils/colors";
+import { zoomIn } from "../../../utils/animations";
 
 export function Foals() {
   return (

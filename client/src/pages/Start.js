@@ -6,7 +6,7 @@ import { ButtonContainer } from "../components/buttons/ButtonContainer";
 import { TextContainer } from "../components/textStyling/TextContainer";
 import { IntroductionText } from "../components/textStyling/IntroductionText";
 import { IntroductionHeading } from "../components/textStyling/IntroductionHeading";
-import Login from "../components/Auth/Login";
+import Login from "../components/auth/Login";
 
 export default function Start() {
   const [login, setLogin] = React.useState(false);
