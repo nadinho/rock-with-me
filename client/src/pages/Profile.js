@@ -22,7 +22,7 @@ export default function Profile() {
           <h1>ANNA</h1>
           <h2>24, Berlin</h2>
           <p>
-            <i>Hier steht ein kleiner Text über mich.</i>
+            <i>Hi! Nicht wundern, das ist nur das Beispielprofil :-) </i>
           </p>
           <Button>Profil bearbeiten</Button>
         </div>

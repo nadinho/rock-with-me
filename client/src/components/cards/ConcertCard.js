@@ -33,11 +33,9 @@ export default function ConcertCard({ concert }) {
         <User>
           <ProfilePictures
             size="big"
-            src={
-              "https://images.unsplash.com/photo-1499887142886-791eca5918cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80"
-            }
+            src={"https://i.pravatar.cc/150?img=30"}
           />
-          <p>Alice</p>
+          <p>Anna</p>
         </User>
 
         <CardTitle size="medium">{concert.artist}</CardTitle>
