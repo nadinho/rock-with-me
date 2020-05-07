@@ -59,7 +59,7 @@ export default function Authentication() {
           <ButtonContainer>
             <ButtonFull>Login</ButtonFull>
 
-            <StyledLink to="/profile">
+            <StyledLink to="/home">
               <ButtonOutline type="button">Ohne Login weiter</ButtonOutline>
             </StyledLink>
 

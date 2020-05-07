@@ -34,9 +34,9 @@ HomeDivider.propTypes = {
 
 const Container = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 35%;
   grid-template-rows: 10px 1fr;
-  padding: 15px 15px 30px 15px;
+  padding: 15px;
   width: 100%;
   animation: ${zoomIn} ease-in 1000ms;
 `;
@@ -61,7 +61,7 @@ const Title = styled.h2`
   justify-self: start;
   grid-column: 1/3;
   grid-row: 2/3;
-  font-size: 1rem;
+  font-size: 0.9rem;
   font-weight: 400;
   text-transform: uppercase;
 `;
