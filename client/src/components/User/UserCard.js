@@ -1,19 +1,19 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { CardButton } from "../cards/CardButton";
-import ProfilePictures from "../ProfilePictures";
+import { CardButton } from "../concerts/CardButton";
+import ProfilePicture from "../user/ProfilePicture";
 import { zoomIn } from "../../utils/animations";
 
 function UserCard() {
   return (
     <Card>
-      <ProfilePictures
+      <ProfilePicture
         size="big"
         src={
           "https://images.unsplash.com/photo-1499887142886-791eca5918cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80"
         }
         alt="User"
-      ></ProfilePictures>
+      ></ProfilePicture>
       <Wrapper>
         <Name>Selina</Name>
         <p>24, Bochum</p>

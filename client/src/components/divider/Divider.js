@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
-import colors from "../utils/colors";
-import { zoomIn } from "../utils/animations";
+import colors from "../../utils/colors";
+import { zoomIn } from "../../utils/animations";
 
 export const Divider = styled.div`
   height: 1px;
