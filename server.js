@@ -2,7 +2,7 @@
 require("dotenv").config();
 const express = require("express");
 const path = require("path");
-const { initDatabase } = require("./lib/database");
+const mongoose = require("mongoose");
 const concerts = require("./lib/routes/concerts");
 
 const port = process.env.PORT || 8090;
@@ -23,9 +23,26 @@ if (process.env.NODE_ENV === "production") {
   });
 }
 
-initDatabase(process.env.DB_URL, process.env.DB_NAME).then(() => {
-  console.log("Database is ready 🎉");
-  app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
-  });
+mongoose.connect(process.env.DB_URL, {
+  dbName: process.env.DB_NAME,
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  useCreateIndex: true,
 });
+
+mongoose.connection.on("connected", () => {
+  console.log("Database is ready 🎉");
+});
+
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
+});
+
+// mongoose.connect(process.env.MONGO_URL,
+//   { useNewUrlParser: true, useUnifiedTopology: true },
+//   () => console.log("Database is ready 🎉");
+// });
+
+// app.listen(port, () => {
+//   console.log(`Server is running on http://localhost:${port}`);
+// });
