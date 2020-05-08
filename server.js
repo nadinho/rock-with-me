@@ -37,12 +37,3 @@ mongoose.connection.on("connected", () => {
 app.listen(port, () => {
   console.log(`Server is running on http://localhost:${port}`);
 });
-
-// mongoose.connect(process.env.MONGO_URL,
-//   { useNewUrlParser: true, useUnifiedTopology: true },
-//   () => console.log("Database is ready 🎉");
-// });
-
-// app.listen(port, () => {
-//   console.log(`Server is running on http://localhost:${port}`);
-// });
