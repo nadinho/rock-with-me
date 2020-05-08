@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 import colors from "../utils/colors";
 
 const SVG = styled.svg`
-  width: 38%;
+  width: 18%;
   fill: none;
   stroke: #7634c0;
   stroke-linecap: round;

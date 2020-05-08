@@ -33,7 +33,7 @@ export default function Profile() {
       <Divider />
 
       <FavContainer>
-        <Heading>💜GENRES</Heading>
+        <Heading>GENRES</Heading>
         <Row>
           <Genre>Post Punk</Genre>
           <Genre>New Wave</Genre>
@@ -44,7 +44,7 @@ export default function Profile() {
       <Divider />
 
       <FavContainer>
-        <Heading>💜Bands</Heading>
+        <Heading>Bands</Heading>
 
         <Row>
           <IMG>
@@ -74,7 +74,7 @@ export default function Profile() {
       <Divider />
 
       <FavContainer>
-        <Heading>💜Songs</Heading>
+        <Heading>Songs</Heading>
         <Row>
           <Genre>The runner</Genre>
           <Genre>Feels like heaven</Genre>
