@@ -1,27 +1,80 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
+import styled from "@emotion/styled";
 import GlobalStyle from "./GlobalStyle";
-
-import { UserRoutes } from "./UserRoutes";
-import AuthProvider from "./contexts/AuthProvider";
-
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Start from "./pages/Start";
-import Register from "./components/auth/Register";
-import Login from "./components/auth/Login";
+import Home from "./pages/Home";
+import Concerts from "./pages/Concerts";
+import Messages from "./pages/Messages";
+import Profile from "./pages/Profile";
+import NewConcert from "./pages/NewConcert";
+import CreatedConcert from "./pages/CreatedConcert";
+
+import TabNavigation from "./components/TabNavigation";
+import {
+  HomeIcon,
+  KonzerteIcon,
+  MessagesIcon,
+  ProfilIcon,
+} from "./assets/icons/Icons";
 
 export default function App() {
+  const [activeNavItem, setActiveNavItem] = React.useState("Home");
+
   return (
-    <AuthProvider>
-      <Router>
-        <GlobalStyle />
+    <Router>
+      <GlobalStyle />
+      <Main>
+        <Route exact path="/" component={Start} />
+        <Route
+          path="/(.+)"
+          render={() => (
+            <TabNavigation
+              links={[
+                {
+                  label: "Home",
+                  Icon: HomeIcon,
+                  id: "home",
+                },
+                {
+                  label: "Konzerte",
+                  Icon: KonzerteIcon,
+                  id: "concerts",
+                },
+                {
+                  label: "Nachrichten",
+                  Icon: MessagesIcon,
+                  id: "messages",
+                },
+                {
+                  label: "Profil",
+                  Icon: ProfilIcon,
+                  id: "profile",
+                },
+              ]}
+              value={activeNavItem}
+              onItemClick={(item) => setActiveNavItem(item)}
+            />
+          )}
+        />
         <Switch>
-          <Route exact path="/" component={Start} />
-          <Route exact path="/register" component={Register} />
-          <Route exact path="/login" component={Login} />
-          <UserRoutes />
+          <Route path="/home" component={Home} />
+          <Route exact path="/concerts" component={Concerts} />
+          <Route path="/newconcert" component={NewConcert} />
+          <Route path="/concerts/:concertId" component={CreatedConcert} />
+          <Route path="/messages" component={Messages} />
+          <Route path="/profile" component={Profile} />
         </Switch>
-      </Router>
-    </AuthProvider>
+      </Main>
+    </Router>
   );
 }
+
+const Main = styled.main`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 100px;
+`;

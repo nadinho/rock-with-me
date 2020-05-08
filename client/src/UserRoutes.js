@@ -76,11 +76,9 @@ export const UserRoutes = () => {
 
       {!authenticatedUser && (
         <>
-          {/* <Main> */}
           <Route exact path="/" component={Start} />
           <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />
-          {/* </Main> */}
         </>
       )}
     </>
