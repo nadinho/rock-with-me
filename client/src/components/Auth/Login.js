@@ -13,7 +13,7 @@ import { Wrapper } from "../../components/forms/Wrapper";
 
 import Register from "./Register";
 
-export default function Authentication() {
+export default function Login() {
   const history = useHistory();
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
