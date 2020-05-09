@@ -76,5 +76,5 @@ const Slider = styled.div`
 
 const NewUser = styled(Link)`
   margin: 5px;
-  animation: ${zoomIn} ease-in 1000ms;
+  animation: ${zoomIn} ease-in 0.8s;
 `;

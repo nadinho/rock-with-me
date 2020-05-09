@@ -24,7 +24,9 @@ export default function Profile() {
           <h1>ANNA</h1>
           <h2>24, Berlin</h2>
           <p>
-            <i>Hi! Nicht wundern, das ist nur das Beispielprofil :-) </i>
+            <i>
+              Immer am rocken, manchmal am schocken! <span>🤪</span>{" "}
+            </i>
           </p>
           <Button>Profil bearbeiten</Button>
         </div>
@@ -33,7 +35,9 @@ export default function Profile() {
       <Divider />
 
       <FavContainer>
-        <Heading>GENRES</Heading>
+        <Heading>
+          <span>💜</span> GENRES
+        </Heading>
         <Row>
           <Genre>Post Punk</Genre>
           <Genre>New Wave</Genre>
@@ -140,9 +144,9 @@ const UserHead = styled.div`
   flex-direction: column;
   width: 100%;
   align-items: center;
-  margin: 70px 0 70px 0;
+  margin: 0px 0 20px 0;
   justify-content: space-between;
-  animation: ${zoomIn} 1000ms ease-in;
+  animation: ${zoomIn} 0.8s ease-in;
 `;
 
 const Row = styled.div`
@@ -150,7 +154,7 @@ const Row = styled.div`
   display: flex;
   flex-wrap: wrap;
   margin-top: -10px;
-  animation: ${zoomIn} 1000ms ease-in;
+  animation: ${zoomIn} 0.8s ease-in;
 `;
 
 const Genre = styled.p`

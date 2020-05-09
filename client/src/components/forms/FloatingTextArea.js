@@ -14,7 +14,7 @@ export default function FloatingTextArea(props) {
 
 const Wrapper = styled.div`
   position: relative;
-  animation: ${zoomIn} 1000ms ease-in;
+  animation: ${zoomIn} 0.8s ease-in;
 `;
 
 const TextArea = styled.textarea`

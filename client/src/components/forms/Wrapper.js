@@ -3,5 +3,5 @@ import { zoomIn } from "../../utils/animations";
 
 export const Wrapper = styled.div`
   position: relative;
-  animation: ${zoomIn} 1000ms ease-in;
+  animation: ${zoomIn} 0.8s ease-in;
 `;

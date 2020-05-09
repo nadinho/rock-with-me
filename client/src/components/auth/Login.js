@@ -17,14 +17,20 @@ import useAuth from "../../contexts/useAuth";
 
 export default function Login() {
   const history = useHistory();
-  const { login, authenticatedUser } = useAuth();
+  const { login, logout, authenticatedUser } = useAuth();
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [register, setRegister] = React.useState(false);
 
   const [loginUser, { error: loginError }] = useMutation(login, {
     onSuccess: () => {
-      history.push("/home");
+      history.push("/profile");
+    },
+  });
+
+  const [logoutUser] = useMutation(logout, {
+    onSuccess: () => {
+      history.push("/");
     },
   });
 
@@ -39,13 +45,22 @@ export default function Login() {
     await loginUser(userInput);
   }
 
+  async function handleLogout() {
+    await logoutUser();
+  }
+
   const handleSignupClick = () => {
     setRegister(true);
   };
 
   return (
     <>
-      {authenticatedUser && <Status>Du bist bereits eingeloggt.</Status>}
+      {authenticatedUser && (
+        <>
+          <Status>Du bist bereits eingeloggt.</Status>
+          <Logout onClick={handleLogout}>Ausloggen</Logout>
+        </>
+      )}
       <ModalContainer>
         {!register && !authenticatedUser && (
           <Form onSubmit={handleLogin}>
@@ -93,6 +108,7 @@ export default function Login() {
 
 const ModalContainer = styled.div`
   position: relative;
+  margin-top: 25px;
   display: flex;
   justify-content: center;
 
@@ -107,8 +123,21 @@ const Error = styled.div`
 
 // will be replaced by toasts
 const Status = styled.div`
+  margin: 0 auto;
+  width: 50%;
   margin-top: 20px;
-  border: 2px solid red;
+  background: #44d7a8;
+  border-radius: 5px;
+  padding: 10px;
+  text-align: center;
+`;
+
+const Logout = styled.button`
+  margin: 0 auto;
+  width: 50%;
+  margin-top: 20px;
+  background: #ff4f00;
+  border-radius: 5px;
   padding: 10px;
   text-align: center;
 `;

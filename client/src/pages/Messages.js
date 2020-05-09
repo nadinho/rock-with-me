@@ -64,5 +64,5 @@ const Container = styled.div`
   flex-direction: column;
   position: relative;
   top: 200px;
-  animation: ${zoomIn} ease-in 1000ms;
+  animation: ${zoomIn} ease-in 0.8s;
 `;

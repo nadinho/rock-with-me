@@ -23,7 +23,7 @@ import {
 } from "./assets/icons/Icons";
 
 const Navigation = () => {
-  const [activeNavItem, setActiveNavItem] = React.useState("Home");
+  const [activeNavItem, setActiveNavItem] = React.useState("");
 
   return (
     <TabNavigation

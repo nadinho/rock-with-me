@@ -64,7 +64,7 @@ const Grid = styled.section`
     ${colors.gradientTwo}
   );
   cursor: pointer;
-  animation: ${zoomIn} 1000ms ease-in;
+  animation: ${zoomIn} 0.8s ease-in;
   &:hover {
     transform: scale(1.1);
   }

@@ -8,5 +8,5 @@ export const InfoContainer = styled.div`
   flex-direction: column;
   flex-wrap: wrap;
   margin: 10px 0px 10px 0px;
-  animation: ${zoomIn} 1000ms ease-in;
+  animation: ${zoomIn} 0.8s ease-in;
 `;

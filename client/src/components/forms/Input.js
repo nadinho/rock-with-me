@@ -3,9 +3,9 @@ import colors from "../../utils/colors";
 import { appear } from "../../utils/animations";
 
 export const Input = styled.input`
-  animation: ${appear} 1000ms ease-in;
+  animation: ${appear} 0.8s ease-in;
   width: 300px;
-  margin: 30px 0 30px 0;
+  margin: 15px 0 15px 0;
   border-right: 1px solid transparent;
   border-image: linear-gradient(
     50deg,
