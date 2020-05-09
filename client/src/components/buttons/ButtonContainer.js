@@ -5,7 +5,7 @@ export const ButtonContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px;
+  margin-top: 15px;
   animation-delay: 200ms;
-  animation: ${zoomIn} 1000ms ease-in;
+  animation: ${zoomIn} 0.8s ease-in;
 `;

@@ -9,14 +9,12 @@ function UserCard() {
     <Card>
       <ProfilePicture
         size="big"
-        src={
-          "https://images.unsplash.com/photo-1499887142886-791eca5918cd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1400&q=80"
-        }
+        src={"https://i.pravatar.cc/150?img=30"}
         alt="User"
       ></ProfilePicture>
       <Wrapper>
-        <Name>Selina</Name>
-        <p>24, Bochum</p>
+        <Name>Anna</Name>
+        <p>24, Berlin</p>
       </Wrapper>
       <CardButton size="small">Profil</CardButton>
     </Card>
@@ -33,7 +31,7 @@ const Card = styled.div`
   border-radius: 6%;
   padding: 20px;
   font-size: 0.8rem;
-  animation: ${zoomIn} 1000ms ease-in;
+  animation: ${zoomIn} 0.8s ease-in;
 `;
 
 const Name = styled.h1`

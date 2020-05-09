@@ -41,7 +41,7 @@ const Container = styled.div`
   &:hover {
     transform: scale(1.1);
   }
-  animation: ${zoomIn} ease-in 1000ms;
+  animation: ${zoomIn} ease-in 0.8s;
 `;
 
 const CardTitle = styled.h1`

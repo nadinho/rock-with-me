@@ -6,5 +6,5 @@ export const DetailTextContainer = styled.div`
   margin: 20px 30px 0 20px;
   text-align: justify;
   white-space: pre-wrap;
-  animation: ${zoomIn} 1000ms ease-in;
+  animation: ${zoomIn} 0.8s ease-in;
 `;

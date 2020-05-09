@@ -38,7 +38,7 @@ const Container = styled.div`
   grid-template-rows: 10px 1fr;
   padding: 15px;
   width: 100%;
-  animation: ${zoomIn} ease-in 1000ms;
+  animation: ${zoomIn} ease-in 0.8s;
 `;
 
 const LinkText = styled.p`

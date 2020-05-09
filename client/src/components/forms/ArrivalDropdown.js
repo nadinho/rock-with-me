@@ -28,7 +28,7 @@ export default function ArrivalDropdown(props) {
 
 const Dropdown = styled.select`
   width: 300px;
-  margin: 30px 10px;
+  margin: 15px 10px;
   padding: 10px 0px 10px 15px;
   border-right: 2px solid transparent;
   border-image: linear-gradient(

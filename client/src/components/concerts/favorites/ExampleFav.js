@@ -77,7 +77,7 @@ const Grid = styled.div`
     ${colors.gradientTwo}
   );
   cursor: pointer;
-  animation: ${zoomIn} ease-in 1000ms;
+  animation: ${zoomIn} ease-in 0.8s;
   &:hover {
     transform: scale(1.1);
   }
