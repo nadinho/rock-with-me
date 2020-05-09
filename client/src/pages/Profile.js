@@ -11,130 +11,166 @@ import { ButtonOutline } from "../components/buttons/ButtonOutline";
 import { Divider } from "../components/divider/Divider";
 import { zoomIn } from "../utils/animations";
 
+import useGetUser from "../hooks/useGetUser";
+import useAuth from "../contexts/useAuth";
+
 export default function Profile() {
+  const { authenticatedUser } = useAuth();
+  const userId = authenticatedUser.userId;
+  const { user, loading, error, doGetUser } = useGetUser(userId);
+
   return (
     <>
       <PageHeader>Profil</PageHeader>
-      <UserHead>
-        <ProfilePicture
-          size="extraBig"
-          src="https://i.pravatar.cc/150?img=30"
-        />
-        <div>
-          <h1>ANNA</h1>
-          <h2>24, Berlin</h2>
-          <p>
-            <i>
-              Immer am rocken, manchmal am schocken! <span>🤪</span>{" "}
-            </i>
-          </p>
-          <Button>Profil bearbeiten</Button>
-        </div>
-      </UserHead>
-
-      <Divider />
-
-      <FavContainer>
-        <Heading>
-          <span>💜</span> GENRES
-        </Heading>
-        <Row>
-          <Genre>Post Punk</Genre>
-          <Genre>New Wave</Genre>
-          <Genre>Rock</Genre>
-        </Row>
-      </FavContainer>
-
-      <Divider />
-
-      <FavContainer>
-        <Heading>Bands</Heading>
-
-        <Row>
-          <IMG>
+      {error && (
+        <>
+          <div>Can not get user!</div>
+          <button onClick={doGetUser}>Try again</button>
+        </>
+      )}
+      {loading && (
+        <>
+          <div>Loading... </div>
+          <div>Pls refresh the page.</div>
+        </>
+      )}
+      {!loading && (
+        <>
+          <UserHead>
             <ProfilePicture
-              size="medium"
-              src="https://guitar.com/wp-content/uploads/2019/09/foals-band-1@1400x1050.jpg"
+              size="extraBig"
+              src="https://i.pravatar.cc/150?img=30"
             />
-            <figcaption>Foals</figcaption>
-          </IMG>
-          <IMG>
-            <ProfilePicture
-              size="medium"
-              src="https://www.laut.de/The-Cure/the-cure-166130.jpg"
-            />
-            <figcaption>The Cure</figcaption>
-          </IMG>
-          <IMG>
-            <ProfilePicture
-              size="medium"
-              src="https://www.laut.de/Joy-Division/joy-division-167444.jpg"
-            />
-            <figcaption>Joy Division</figcaption>
-          </IMG>
-        </Row>
-      </FavContainer>
+            <div>
+              <h1>{user.name}</h1>
+              <h2>24, Berlin</h2>
+              <p>
+                <i>
+                  Immer am rocken, manchmal am schocken! <span>🤪</span>{" "}
+                </i>
+              </p>
+              <Button>Profil bearbeiten</Button>
+            </div>
+          </UserHead>
 
-      <Divider />
+          <Divider />
 
-      <FavContainer>
-        <Heading>Songs</Heading>
-        <Row>
-          <Genre>The runner</Genre>
-          <Genre>Feels like heaven</Genre>
-          <Genre>Soothe me</Genre>
-        </Row>
-      </FavContainer>
+          <FavContainer>
+            <Heading>
+              <span role="img" aria-label="alert-emoji">
+                💜
+              </span>
+              GENRES
+            </Heading>
+            <Row>
+              <Genre>Post Punk</Genre>
+              <Genre>New Wave</Genre>
+              <Genre>Rock</Genre>
+            </Row>
+          </FavContainer>
 
-      <Divider />
+          <Divider />
 
-      <FavContainer>
-        <Heading>Buddies</Heading>
-        <Row>
-          <IMG>
-            <ProfilePicture
-              size="medium"
-              src="https://i.pravatar.cc/150?img=56"
-            />
-            <figcaption>Daniel</figcaption>
-          </IMG>
-          <IMG>
-            <ProfilePicture
-              size="medium"
-              src="https://i.pravatar.cc/150?img=41"
-            />
-            <figcaption>Luisa</figcaption>
-          </IMG>
-          <IMG>
-            <ProfilePicture
-              size="medium"
-              src="https://i.pravatar.cc/150?img=58"
-            />
-            <figcaption>Jörn</figcaption>
-          </IMG>
-          <IMG>
-            <ProfilePicture
-              size="medium"
-              src="https://i.pravatar.cc/150?img=10"
-            />
-            <figcaption>Lea</figcaption>
-          </IMG>
-          <IMG>
-            <ProfilePicture
-              size="medium"
-              src="https://i.pravatar.cc/150?img=16"
-            />
-            <figcaption>Malia</figcaption>
-          </IMG>
-        </Row>
-      </FavContainer>
+          <FavContainer>
+            <Heading>
+              <span role="img" aria-label="alert-emoji">
+                💜
+              </span>
+              Bands
+            </Heading>
 
-      <Divider />
+            <Row>
+              <IMG>
+                <ProfilePicture
+                  size="medium"
+                  src="https://guitar.com/wp-content/uploads/2019/09/foals-band-1@1400x1050.jpg"
+                />
+                <figcaption>Foals</figcaption>
+              </IMG>
+              <IMG>
+                <ProfilePicture
+                  size="medium"
+                  src="https://www.laut.de/The-Cure/the-cure-166130.jpg"
+                />
+                <figcaption>The Cure</figcaption>
+              </IMG>
+              <IMG>
+                <ProfilePicture
+                  size="medium"
+                  src="https://www.laut.de/Joy-Division/joy-division-167444.jpg"
+                />
+                <figcaption>Joy Division</figcaption>
+              </IMG>
+            </Row>
+          </FavContainer>
 
-      <ButtonContainer>
-        <ButtonFull>Werdet Buddies</ButtonFull>
-        <ButtonOutline>Schreib &apos;ne Nachricht</ButtonOutline>
-      </ButtonContainer>
+          <Divider />
+
+          <FavContainer>
+            <Heading>
+              <span role="img" aria-label="alert-emoji">
+                💜
+              </span>
+              Songs
+            </Heading>
+            <Row>
+              <Genre>The runner</Genre>
+              <Genre>Feels like heaven</Genre>
+              <Genre>Soothe me</Genre>
+            </Row>
+          </FavContainer>
+
+          <Divider />
+
+          <FavContainer>
+            <Heading>Buddies</Heading>
+            <Row>
+              <IMG>
+                <ProfilePicture
+                  size="medium"
+                  src="https://i.pravatar.cc/150?img=56"
+                />
+                <figcaption>Daniel</figcaption>
+              </IMG>
+              <IMG>
+                <ProfilePicture
+                  size="medium"
+                  src="https://i.pravatar.cc/150?img=41"
+                />
+                <figcaption>Luisa</figcaption>
+              </IMG>
+              <IMG>
+                <ProfilePicture
+                  size="medium"
+                  src="https://i.pravatar.cc/150?img=58"
+                />
+                <figcaption>Jörn</figcaption>
+              </IMG>
+              <IMG>
+                <ProfilePicture
+                  size="medium"
+                  src="https://i.pravatar.cc/150?img=10"
+                />
+                <figcaption>Lea</figcaption>
+              </IMG>
+              <IMG>
+                <ProfilePicture
+                  size="medium"
+                  src="https://i.pravatar.cc/150?img=16"
+                />
+                <figcaption>Malia</figcaption>
+              </IMG>
+            </Row>
+          </FavContainer>
+
+          <Divider />
+
+          <ButtonContainer>
+            <ButtonFull>Werdet Buddies</ButtonFull>
+            <ButtonOutline>Schreib &apos;ne Nachricht</ButtonOutline>
+          </ButtonContainer>
+        </>
+      )}
     </>
   );
 }

@@ -40,13 +40,14 @@ export async function logoutUser() {
   return confirmation;
 }
 
-export async function getUser(key, userId) {
-  const response = await fetch(`/api/users/${userId}`, {
+export async function getUser(userId) {
+  const response = await fetch(`/api/auth/${userId}`, {
     method: "GET",
   });
   if (!response.ok) {
     throw new Error(response.statusText);
   }
   const user = await response.json();
+
   return user;
 }
