@@ -68,7 +68,7 @@ export const UserRoutes = () => {
             <Route path="/newconcert" component={NewConcert} />
             <Route path="/concerts/:concertId" component={CreatedConcert} />
             <Route path="/messages" component={Messages} />
-            <Route path="/profile" component={Profile} />
+            <Route path="/:userId" component={Profile} />
           </Switch>
           <Navigation />
         </Main>

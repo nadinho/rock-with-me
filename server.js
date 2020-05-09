@@ -6,7 +6,6 @@ const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 
 const concerts = require("./lib/routes/concerts");
-const users = require("./lib/routes/users");
 const auth = require("./lib/routes/auth");
 
 const port = process.env.PORT || 8090;
@@ -18,7 +17,6 @@ app.use(cookieParser());
 
 app.use("/api/concerts", concerts);
 app.use("/api/auth", auth);
-app.use("/api/users", users);
 
 if (process.env.NODE_ENV === "production") {
   // Serve any static files
