@@ -46,7 +46,10 @@ export default function Profile() {
               <h2>24, Berlin</h2>
               <p>
                 <i>
-                  Immer am rocken, manchmal am schocken! <span>🤪</span>{" "}
+                  Immer am rocken, manchmal am schocken!{" "}
+                  <span role="img" aria-label="emoji">
+                    🤪
+                  </span>
                 </i>
               </p>
               <Button>Profil bearbeiten</Button>
@@ -57,7 +60,7 @@ export default function Profile() {
 
           <FavContainer>
             <Heading>
-              <span role="img" aria-label="alert-emoji">
+              <span role="img" aria-label="fav-emoji">
                 💜
               </span>
               GENRES
@@ -73,7 +76,7 @@ export default function Profile() {
 
           <FavContainer>
             <Heading>
-              <span role="img" aria-label="alert-emoji">
+              <span role="img" aria-label="fav-emoji">
                 💜
               </span>
               Bands
@@ -108,7 +111,7 @@ export default function Profile() {
 
           <FavContainer>
             <Heading>
-              <span role="img" aria-label="alert-emoji">
+              <span role="img" aria-label="fav-emoji">
                 💜
               </span>
               Songs
