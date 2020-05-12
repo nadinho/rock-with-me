@@ -25,7 +25,7 @@ export default function Register() {
     };
     await registerUser(userInput);
     alert("Juhu, du hast jetzt einen Account! Bitte logge dich ein.");
-    history.push("/auth/login");
+    history.push("/login");
   }
 
   return (

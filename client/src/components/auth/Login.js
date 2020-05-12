@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
+import colors from "../../utils/colors";
+
 import { StyledLink } from "../../components/StyledLink";
 import { useHistory } from "react-router-dom";
 import { useMutation } from "react-query";
@@ -12,7 +14,6 @@ import { ButtonFull } from "../../components/buttons/ButtonFull";
 import { Wrapper } from "../../components/forms/Wrapper";
 
 import Register from "./Register";
-
 import useAuth from "../../contexts/useAuth";
 
 export default function Login() {
@@ -22,11 +23,14 @@ export default function Login() {
   const [password, setPassword] = React.useState("");
   const [register, setRegister] = React.useState(false);
 
-  const [loginUser, { error: loginError }] = useMutation(login, {
-    onSuccess: () => {
-      history.push("/profile");
-    },
-  });
+  const [loginUser, { status: loginStatus, error: loginError }] = useMutation(
+    login,
+    {
+      onSuccess: () => {
+        history.push(`/profile`);
+      },
+    }
+  );
 
   const [logoutUser] = useMutation(logout, {
     onSuccess: () => {
@@ -41,7 +45,6 @@ export default function Login() {
       email,
       password,
     };
-
     await loginUser(userInput);
   }
 
@@ -57,8 +60,13 @@ export default function Login() {
     <>
       {authenticatedUser && (
         <>
-          <Status>Du bist bereits eingeloggt.</Status>
-          <Logout onClick={handleLogout}>Ausloggen</Logout>
+          {loginStatus && (
+            <StatusAuth>
+              <div>Du bist bereits eingeloggt.</div>
+              <a href="/home">Home</a>
+              <button onClick={handleLogout}>Logout</button>
+            </StatusAuth>
+          )}
         </>
       )}
       <ModalContainer>
@@ -94,7 +102,7 @@ export default function Login() {
               <small>
                 Noch keinen Account?&nbsp;
                 <StyledLink to="#" onClick={handleSignupClick}>
-                  Jetzt registrieren.
+                  <u>Jetzt registrieren.</u>
                 </StyledLink>
               </small>
             </ButtonContainer>
@@ -116,28 +124,16 @@ const ModalContainer = styled.div`
   height: 40%;
 `;
 
-// will be replaced by toasts
 const Error = styled.div`
   padding: 10px;
 `;
 
-// will be replaced by toasts
-const Status = styled.div`
+const StatusAuth = styled.div`
   margin: 0 auto;
-  width: 50%;
-  margin-top: 20px;
-  background: #44d7a8;
+  width: 80%;
+  margin-top: 40px;
+  background: ${colors.gradientOne};
   border-radius: 5px;
-  padding: 10px;
-  text-align: center;
-`;
-
-const Logout = styled.button`
-  margin: 0 auto;
-  width: 50%;
-  margin-top: 20px;
-  background: #ff4f00;
-  border-radius: 5px;
-  padding: 10px;
+  padding: 30px;
   text-align: center;
 `;
