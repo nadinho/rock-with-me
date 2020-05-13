@@ -95,7 +95,7 @@ export default function Login() {
               />
               <FloatingLabel>Dein Passwort</FloatingLabel>
             </Wrapper>
-            {loginError && <Error>{"nope"}</Error>}
+            {loginError && <Error>{loginError.message}</Error>}
             <ButtonContainer>
               <ButtonFull>Login</ButtonFull>
 
