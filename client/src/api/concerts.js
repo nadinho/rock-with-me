@@ -5,27 +5,30 @@ export async function postConcert(concert) {
       "Content-Type": "application/json",
     },
     body: JSON.stringify(concert),
-    Encrypt: "true",
   });
-  const createdConcert = await response.json();
-  return createdConcert;
+  if (!response.ok) {
+    const errorMessage = await response.text();
+    throw new Error(errorMessage);
+  }
+  const createdConcertId = await response.json();
+  return createdConcertId;
 }
 
 export async function getConcert(concertId) {
   const response = await fetch(`/api/concerts/${concertId}`);
+  if (!response.ok) {
+    const errorMessage = await response.text();
+    throw new Error(errorMessage);
+  }
   const concert = await response.json();
   return concert;
 }
 
 export async function getConcerts() {
   const response = await fetch(`/api/concerts`);
-  if (!response.ok) {
-    throw new Error(
-      "Oh snap! 🤬",
-      response.statusText,
-      "Pls refresh the page 🙃"
-    );
-  }
+  // if (!response.ok) {
+  //   throw new Error("Bitte lade die Seite neu", response.statusText);
+  // }
   const concerts = await response.json();
   return concerts;
 }

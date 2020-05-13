@@ -15,6 +15,9 @@ import { postConcert } from "../api/concerts";
 import { Wrapper } from "../components/forms/Wrapper";
 import { ButtonContainer } from "../components/buttons/ButtonContainer";
 
+import { store } from "react-notifications-component";
+import { useMutation } from "react-query";
+
 export default function NewConcert() {
   const history = useHistory();
   const [artist, setArtist] = React.useState("");
@@ -24,6 +27,26 @@ export default function NewConcert() {
   const [arrival, setArrival] = React.useState("");
   const [price, setPrice] = React.useState("");
   const [detailText, setDetailText] = React.useState("");
+
+  const [createConcert] = useMutation(postConcert, {
+    onSuccess: () => {
+      store.addNotification({
+        message: "Yay, deine Anfrage wurde gepostet!",
+        type: "success",
+        container: "top-right",
+        dismiss: {
+          duration: 3000,
+          showIcon: true,
+        },
+        slidingExit: {
+          duration: 800,
+          timingFunction: "ease-out",
+          delay: 0,
+        },
+      });
+      history.push(`/concerts`);
+    },
+  });
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -38,8 +61,7 @@ export default function NewConcert() {
       detailText,
     };
 
-    await postConcert(concert);
-    history.push(`/concerts`);
+    await createConcert(concert);
   }
 
   return (
