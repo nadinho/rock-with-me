@@ -38,8 +38,8 @@ export default function NewConcert() {
       detailText,
     };
 
-    const createdConcertId = await postConcert(concert);
-    history.push(`/concerts/${createdConcertId}`);
+    await postConcert(concert);
+    history.push(`/concerts`);
   }
 
   return (
