@@ -11,6 +11,8 @@ import { ButtonContainer } from "../../components/buttons/ButtonContainer";
 import { ButtonFull } from "../../components/buttons/ButtonFull";
 import { Wrapper } from "../../components/forms/Wrapper";
 
+import { store } from "react-notifications-component";
+
 import Register from "./Register";
 import useAuth from "../../contexts/useAuth";
 
@@ -25,6 +27,20 @@ export default function Login() {
     login,
     {
       onSuccess: () => {
+        store.addNotification({
+          message: "Du bist nun eingeloggt",
+          type: "success",
+          container: "top-right",
+          dismiss: {
+            duration: 3000,
+            showIcon: true,
+          },
+          slidingExit: {
+            duration: 800,
+            timingFunction: "ease-out",
+            delay: 0,
+          },
+        });
         history.push(`/profile`);
       },
     }
