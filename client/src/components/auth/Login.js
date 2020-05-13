@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "@emotion/styled";
 
-import { StyledLink } from "../../components/StyledLink";
 import { useHistory, Redirect } from "react-router-dom";
 import { useMutation } from "react-query";
 
@@ -80,9 +79,9 @@ export default function Login() {
 
               <small>
                 Noch keinen Account?&nbsp;
-                <StyledLink to="#" onClick={handleSignupClick}>
+                <a onClick={handleSignupClick}>
                   <u>Jetzt registrieren.</u>
-                </StyledLink>
+                </a>
               </small>
             </ButtonContainer>
           </Form>

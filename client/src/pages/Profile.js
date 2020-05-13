@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import colors from "../utils/colors";
+import { StyledLink } from "../components/StyledLink";
 
 import PageHeader from "../components/header/PageHeader";
 import ProfilePicture from "../components/user/ProfilePicture";
@@ -13,11 +14,18 @@ import { zoomIn } from "../utils/animations";
 
 import useGetUser from "../hooks/useGetUser";
 import useAuth from "../contexts/useAuth";
+import { useMutation } from "react-query";
 
 export default function Profile() {
-  const { authenticatedUser } = useAuth();
+  const { logout, authenticatedUser } = useAuth();
   const userId = authenticatedUser.userId;
   const { user, loading, error, doGetUser } = useGetUser(userId);
+
+  const [logoutUser] = useMutation(logout);
+
+  async function handleLogout() {
+    await logoutUser();
+  }
 
   return (
     <>
@@ -46,13 +54,16 @@ export default function Profile() {
               <h2>24, Berlin</h2>
               <p>
                 <i>
-                  Immer am rocken, manchmal am schocken!{" "}
+                  Immer am rocken, manchmal am schocken!
                   <span role="img" aria-label="emoji">
                     🤪
                   </span>
                 </i>
               </p>
               <Button>Profil bearbeiten</Button>
+              <StyledLink to="/">
+                <Button onClick={handleLogout}>Logout</Button>
+              </StyledLink>
             </div>
           </UserHead>
 
