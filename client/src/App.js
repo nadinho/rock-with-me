@@ -9,11 +9,16 @@ import Start from "./pages/Start";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 
+import ReactNotifications from "react-notifications-component";
+import "react-notifications-component/dist/theme.css";
+
 export default function App() {
   return (
     <AuthProvider>
       <Router>
         <GlobalStyle />
+
+        <ReactNotifications />
         <Switch>
           <Route exact path="/" component={Start} />
           <Route exact path="/register" component={Register} />

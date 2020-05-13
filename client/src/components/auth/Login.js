@@ -1,9 +1,8 @@
 import React from "react";
 import styled from "@emotion/styled";
-import colors from "../../utils/colors";
 
 import { StyledLink } from "../../components/StyledLink";
-import { useHistory } from "react-router-dom";
+import { useHistory, Redirect } from "react-router-dom";
 import { useMutation } from "react-query";
 
 import { Form } from "../../components/forms/Form";
@@ -18,7 +17,7 @@ import useAuth from "../../contexts/useAuth";
 
 export default function Login() {
   const history = useHistory();
-  const { login, logout, authenticatedUser } = useAuth();
+  const { login, authenticatedUser } = useAuth();
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [register, setRegister] = React.useState(false);
@@ -32,12 +31,6 @@ export default function Login() {
     }
   );
 
-  const [logoutUser] = useMutation(logout, {
-    onSuccess: () => {
-      history.push("/");
-    },
-  });
-
   async function handleLogin(event) {
     event.preventDefault();
 
@@ -48,27 +41,13 @@ export default function Login() {
     await loginUser(userInput);
   }
 
-  async function handleLogout() {
-    await logoutUser();
-  }
-
   const handleSignupClick = () => {
     setRegister(true);
   };
 
   return (
     <>
-      {authenticatedUser && (
-        <>
-          {loginStatus && (
-            <StatusAuth>
-              <div>Du bist bereits eingeloggt.</div>
-              <a href="/home">Home</a>
-              <button onClick={handleLogout}>Logout</button>
-            </StatusAuth>
-          )}
-        </>
-      )}
+      {authenticatedUser && <>{loginStatus && <Redirect to="/home" />}</>}
       <ModalContainer>
         {!register && !authenticatedUser && (
           <Form onSubmit={handleLogin}>
@@ -126,14 +105,4 @@ const ModalContainer = styled.div`
 
 const Error = styled.div`
   padding: 10px;
-`;
-
-const StatusAuth = styled.div`
-  margin: 0 auto;
-  width: 80%;
-  margin-top: 40px;
-  background: ${colors.gradientOne};
-  border-radius: 5px;
-  padding: 30px;
-  text-align: center;
 `;
