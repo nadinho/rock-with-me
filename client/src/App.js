@@ -1,6 +1,7 @@
 import React from "react";
 import GlobalStyle from "./GlobalStyle";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import ScrollToTop from "./utils/ScrollToTop";
 
 import { UserRoutes } from "./UserRoutes";
 import AuthProvider from "./contexts/AuthProvider";
@@ -16,8 +17,8 @@ export default function App() {
   return (
     <AuthProvider>
       <Router>
+        <ScrollToTop />
         <GlobalStyle />
-
         <ReactNotifications />
         <Switch>
           <Route exact path="/" component={Start} />

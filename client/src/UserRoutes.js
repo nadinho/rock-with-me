@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { Switch, Route } from "react-router-dom";
+import ScrollToTop from "./utils/ScrollToTop";
 
 import Start from "./pages/Start";
 import Home from "./pages/Home";
@@ -60,6 +61,7 @@ export const UserRoutes = () => {
 
   return (
     <>
+      <ScrollToTop />
       {authenticatedUser && (
         <Main>
           <Switch>
