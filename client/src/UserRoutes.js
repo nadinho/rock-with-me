@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { Switch, Route } from "react-router-dom";
-import ScrollToTop from "./utils/ScrollToTop";
+import ScrollToTop from "./hooks/useScrollToTop";
 
 import Start from "./pages/Start";
 import Home from "./pages/Home";

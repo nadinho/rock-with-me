@@ -1,7 +1,7 @@
 import React from "react";
 import GlobalStyle from "./GlobalStyle";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import ScrollToTop from "./utils/ScrollToTop";
+import ScrollToTop from "./hooks/useScrollToTop";
 
 import { UserRoutes } from "./UserRoutes";
 import AuthProvider from "./contexts/AuthProvider";
