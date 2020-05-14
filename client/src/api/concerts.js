@@ -26,9 +26,6 @@ export async function getConcert(concertId) {
 
 export async function getConcerts() {
   const response = await fetch(`/api/concerts`);
-  // if (!response.ok) {
-  //   throw new Error("Bitte lade die Seite neu", response.statusText);
-  // }
   const concerts = await response.json();
   return concerts;
 }
