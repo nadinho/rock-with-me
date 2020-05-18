@@ -7,7 +7,8 @@ export async function registerUser(userInformation) {
     body: JSON.stringify(userInformation),
   });
   if (!response.ok) {
-    throw new Error(response.statusText);
+    const errorMessage = await response.text();
+    throw new Error(errorMessage);
   }
   const createdUserId = await response.json();
   return createdUserId;
@@ -22,7 +23,8 @@ export async function loginUser(userInformation) {
     body: JSON.stringify(userInformation),
   });
   if (!response.ok) {
-    throw new Error(response.statusText);
+    const errorMessage = await response.text();
+    throw new Error(errorMessage);
   }
   const user = await response.json();
   return user;
@@ -40,13 +42,15 @@ export async function logoutUser() {
   return confirmation;
 }
 
-export async function getUser(key, userId) {
-  const response = await fetch(`/api/users/${userId}`, {
+export async function getUser(userId) {
+  const response = await fetch(`/api/auth/${userId}`, {
     method: "GET",
   });
   if (!response.ok) {
-    throw new Error(response.statusText);
+    const errorMessage = await response.text();
+    throw new Error(errorMessage);
   }
   const user = await response.json();
+
   return user;
 }

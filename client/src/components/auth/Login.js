@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
-import { StyledLink } from "../../components/StyledLink";
-import { useHistory } from "react-router-dom";
+
+import { useHistory, Redirect } from "react-router-dom";
 import { useMutation } from "react-query";
 
 import { Form } from "../../components/forms/Form";
@@ -11,28 +11,40 @@ import { ButtonContainer } from "../../components/buttons/ButtonContainer";
 import { ButtonFull } from "../../components/buttons/ButtonFull";
 import { Wrapper } from "../../components/forms/Wrapper";
 
-import Register from "./Register";
+import { store } from "react-notifications-component";
 
+import Register from "./Register";
 import useAuth from "../../contexts/useAuth";
 
 export default function Login() {
   const history = useHistory();
-  const { login, logout, authenticatedUser } = useAuth();
+  const { login, authenticatedUser } = useAuth();
   const [email, setEmail] = React.useState("");
   const [password, setPassword] = React.useState("");
   const [register, setRegister] = React.useState(false);
 
-  const [loginUser, { error: loginError }] = useMutation(login, {
-    onSuccess: () => {
-      history.push("/profile");
-    },
-  });
-
-  const [logoutUser] = useMutation(logout, {
-    onSuccess: () => {
-      history.push("/");
-    },
-  });
+  const [loginUser, { status: loginStatus, error: loginError }] = useMutation(
+    login,
+    {
+      onSuccess: () => {
+        store.addNotification({
+          message: "Du bist nun eingeloggt",
+          type: "success",
+          container: "top-right",
+          dismiss: {
+            duration: 3000,
+            showIcon: true,
+          },
+          slidingExit: {
+            duration: 800,
+            timingFunction: "ease-out",
+            delay: 0,
+          },
+        });
+        history.push(`/profile`);
+      },
+    }
+  );
 
   async function handleLogin(event) {
     event.preventDefault();
@@ -41,12 +53,7 @@ export default function Login() {
       email,
       password,
     };
-
     await loginUser(userInput);
-  }
-
-  async function handleLogout() {
-    await logoutUser();
   }
 
   const handleSignupClick = () => {
@@ -55,12 +62,7 @@ export default function Login() {
 
   return (
     <>
-      {authenticatedUser && (
-        <>
-          <Status>Du bist bereits eingeloggt.</Status>
-          <Logout onClick={handleLogout}>Ausloggen</Logout>
-        </>
-      )}
+      {authenticatedUser && <>{loginStatus && <Redirect to="/home" />}</>}
       <ModalContainer>
         {!register && !authenticatedUser && (
           <Form onSubmit={handleLogin}>
@@ -87,15 +89,15 @@ export default function Login() {
               />
               <FloatingLabel>Dein Passwort</FloatingLabel>
             </Wrapper>
-            {loginError && <Error>{"nope"}</Error>}
+            {loginError && <Error>{loginError.message}</Error>}
             <ButtonContainer>
               <ButtonFull>Login</ButtonFull>
 
               <small>
                 Noch keinen Account?&nbsp;
-                <StyledLink to="#" onClick={handleSignupClick}>
-                  Jetzt registrieren.
-                </StyledLink>
+                <a onClick={handleSignupClick}>
+                  <u>Jetzt registrieren.</u>
+                </a>
               </small>
             </ButtonContainer>
           </Form>
@@ -116,28 +118,6 @@ const ModalContainer = styled.div`
   height: 40%;
 `;
 
-// will be replaced by toasts
 const Error = styled.div`
   padding: 10px;
-`;
-
-// will be replaced by toasts
-const Status = styled.div`
-  margin: 0 auto;
-  width: 50%;
-  margin-top: 20px;
-  background: #44d7a8;
-  border-radius: 5px;
-  padding: 10px;
-  text-align: center;
-`;
-
-const Logout = styled.button`
-  margin: 0 auto;
-  width: 50%;
-  margin-top: 20px;
-  background: #ff4f00;
-  border-radius: 5px;
-  padding: 10px;
-  text-align: center;
 `;

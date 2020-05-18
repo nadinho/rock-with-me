@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "@emotion/styled";
 import { Switch, Route } from "react-router-dom";
+import ScrollToTop from "./hooks/useScrollToTop";
 
 import Start from "./pages/Start";
 import Home from "./pages/Home";
@@ -60,6 +61,7 @@ export const UserRoutes = () => {
 
   return (
     <>
+      <ScrollToTop />
       {authenticatedUser && (
         <Main>
           <Switch>
@@ -68,7 +70,7 @@ export const UserRoutes = () => {
             <Route path="/newconcert" component={NewConcert} />
             <Route path="/concerts/:concertId" component={CreatedConcert} />
             <Route path="/messages" component={Messages} />
-            <Route path="/profile" component={Profile} />
+            <Route path="/:userId" component={Profile} />
           </Switch>
           <Navigation />
         </Main>

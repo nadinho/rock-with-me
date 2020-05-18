@@ -19,6 +19,7 @@ import useGetConcerts from "../hooks/useGetConcerts";
 
 export default function Home() {
   const concerts = useGetConcerts();
+
   return (
     <>
       <PageHeader>Willkommen</PageHeader>
